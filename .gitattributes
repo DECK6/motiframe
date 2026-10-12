@@ -1,2 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.mp4 binary
+*.woff2 binary
+*.wav binary
+*.motionproj binary
 # Keep upstream license bytes, including their original line endings and spacing.
-**/*OFL.txt -whitespace
+**/*OFL.txt -text -whitespace

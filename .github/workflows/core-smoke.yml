@@ -22,9 +22,24 @@ jobs:
         with:
           bun-version-file: package.json
       - uses: FedericoCarboni/setup-ffmpeg@v3
+        if: runner.os == 'Windows'
         with:
           ffmpeg-version: '8.1.2'
           architecture: x64
+      - name: Install FFmpeg build dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libx264-dev nasm pkg-config zlib1g-dev
+      - name: Install FFmpeg build dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: brew install x264 nasm pkg-config
+      - uses: actions/cache@v5
+        if: runner.os != 'Windows'
+        with:
+          path: .cache/ci-ffmpeg
+          key: ffmpeg-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('scripts/setup-ci-ffmpeg.sh') }}
+      - name: Build pinned FFmpeg
+        if: runner.os != 'Windows'
+        run: bash scripts/setup-ci-ffmpeg.sh
       - run: bun install --frozen-lockfile
       - run: bun run setup
       - run: bun run build

@@ -73,7 +73,7 @@ Performance smoke measures actual `PreviewEngine.frame` operations on a 30-secon
 
 Showcase smoke renders all three projects in `examples/showcase/` at full length, nine short aspect/FPS combinations, and a PNG sequence. It verifies output frame counts, H.264/AAC streams, 48 kHz audio length and signal, PNG dimensions, content hashes, and complete decoding. Evidence and sampled frames are written under `artifacts/showcase-smoke/`. The examples include their synthetic media, compiled custom elements, source definitions, fonts, and font license.
 
-The workflow in `.github/workflows/core-smoke.yml` configures Linux, Intel macOS, and Windows runs. Configuration is not a test result: an OS is verified only after its report passes. The [GitHub runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) identifies the selected labels; [setup-ffmpeg](https://github.com/federicocarboni/setup-ffmpeg) documents its platform/version availability. A missing pinned FFmpeg build fails setup instead of silently changing versions.
+The workflow in `.github/workflows/core-smoke.yml` configures Linux, Intel macOS, and Windows runs. Configuration is not a test result: an OS is verified only after its report passes. The [GitHub runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners) identifies the selected labels. Windows uses [setup-ffmpeg](https://github.com/federicocarboni/setup-ffmpeg); Linux and macOS build the pinned FFmpeg source release with a checked SHA-256 and cache it for subsequent runs. Source checkouts retain LF line endings on every OS.
 
 ## Create a release
 
