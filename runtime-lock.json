@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "node": "24.21.0",
+  "bun": "1.4.2",
+  "chrome": "155.0.8059.39",
+  "ffmpeg": "8.1.2",
+  "colorSpace": "srgb",
+  "sampleRate": 48000,
+  "provenance": [
+    "https://nodejs.org/dist/index.json",
+    "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json"
+  ]
+}

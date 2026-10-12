@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "phase": "P3",
+  "gate": "implementation-plan-verified",
+  "status": "pending",
+  "owner_runtime": "codex",
+  "plan_path": "docs/plan/implementation/P3-agents.md",
+  "contracts_path": "docs/plan/implementation/contracts.md",
+  "acceptance_criteria": [
+    "외부 코딩 에이전트가 SDK·CLI·스킬로 제작하고 사람과 번갈아 같은 프로젝트를 수정한다.",
+    "T16–T21 통과. ontology ID·scope 보존, CLI→UI→CLI 실제 왕복·충돌·undo, React/HTML 코드 작성·A/B 검수. 프로그램 내부 모델/API 키 없이 실제 에이전트 1종이 스킬로 완주한다.",
+    "AI execution belongs to external coding agents; product exposes SDK, CLI, skill kit and timeline"
+  ],
+  "tasks": [
+    {
+      "id": "T16",
+      "title": "온톨로지 스냅샷·자산 경로 이식",
+      "depends_on": [
+        "T07"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T17",
+      "title": "개념 검색·참고 장면 카드·적용 기록",
+      "depends_on": [
+        "T16",
+        "T12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T18",
+      "title": "외부 에이전트용 CLI·컨텍스트·명령 규격",
+      "depends_on": [
+        "T17",
+        "T15"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T19",
+      "title": "코딩 에이전트↔타임라인 동기화·충돌·되돌리기",
+      "depends_on": [
+        "T18"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T20",
+      "title": "SDK·모션리듬 스킬·예제의 에이전트 배포 묶음",
+      "depends_on": [
+        "T19",
+        "T11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T21",
+      "title": "공통 A/B 비교·축별 검수·에이전트용 리포트",
+      "depends_on": [
+        "T20"
+      ],
+      "status": "pending"
+    }
+  ],
+  "evidence": [],
+  "updated_at": "2026-10-12T05:12:00.898489+00:00",
+  "product_name": "MotiFrame",
+  "product_name_ko": "모티프레임",
+  "project_slug": "motiframe",
+  "planned_code_root": "/Volumes/data/Dev/motiframe"
+}

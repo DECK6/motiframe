@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "phase": "P2",
+  "gate": "implementation-plan-verified",
+  "status": "pending",
+  "owner_runtime": "codex",
+  "plan_path": "docs/plan/implementation/P2-motion.md",
+  "contracts_path": "docs/plan/implementation/contracts.md",
+  "acceptance_criteria": [
+    "속도·텐션·리듬을 각각 설계하고 악보 수정이 실제 움직임과 오디오에 반영된다.",
+    "T12–T15 통과. 한글·읽기 창·대표 강세·여섯 레시피·교차 인계, manual 채널 보존. 빠르지만 단조로운 경우와 느린 긴장을 별도로 비교한다.",
+    "AI execution belongs to external coding agents; product exposes SDK, CLI, skill kit and timeline"
+  ],
+  "tasks": [
+    {
+      "id": "T12",
+      "title": "프레이즈·세 축·읽기 역할의 시간 악보",
+      "depends_on": [
+        "T11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T13",
+      "title": "한글 타입·Selector·읽기/변형 창",
+      "depends_on": [
+        "T12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T14",
+      "title": "모션 레시피·전환·동작 인계",
+      "depends_on": [
+        "T13"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T15",
+      "title": "재생 transport·오디오 강세·역할 검수",
+      "depends_on": [
+        "T14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "evidence": [],
+  "updated_at": "2026-10-12T05:12:00.899187+00:00",
+  "product_name": "MotiFrame",
+  "product_name_ko": "모티프레임",
+  "project_slug": "motiframe",
+  "planned_code_root": "/Volumes/data/Dev/motiframe"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "phase": "P4",
+  "gate": "implementation-plan-verified",
+  "status": "pending",
+  "owner_runtime": "codex",
+  "plan_path": "docs/plan/implementation/P4-release.md",
+  "contracts_path": "docs/plan/implementation/contracts.md",
+  "acceptance_criteria": [
+    "깨끗한 세 OS에서 도구를 설치하고 에이전트·사람 협업으로 세 작품을 제작·복구·출력한다.",
+    "T22–T25 통과. 성능 실측·OS/arch별 설치/출력 증거·장애 복구·세 완성 작품과 편집 프로젝트. 실제 관찰 전 체감 검수는 unverified, 외부 배포는 별도 범위다.",
+    "AI execution belongs to external coding agents; product exposes SDK, CLI, skill kit and timeline"
+  ],
+  "tasks": [
+    {
+      "id": "T22",
+      "title": "프록시·캐시 무효화·미리보기 성능",
+      "depends_on": [
+        "T21"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T23",
+      "title": "SDK·CLI·로컬 실행기의 세 OS 설치 묶음",
+      "depends_on": [
+        "T22"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T24",
+      "title": "충돌·저장 실패·실행 중단 복구",
+      "depends_on": [
+        "T23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T25",
+      "title": "실제 세 작품 제작·에이전트 왕복·릴리스 후보",
+      "depends_on": [
+        "T24"
+      ],
+      "status": "pending"
+    }
+  ],
+  "evidence": [],
+  "updated_at": "2026-10-12T05:12:00.897609+00:00",
+  "product_name": "MotiFrame",
+  "product_name_ko": "모티프레임",
+  "project_slug": "motiframe",
+  "planned_code_root": "/Volumes/data/Dev/motiframe"
+}

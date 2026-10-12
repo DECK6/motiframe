@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "mixed-static",
+  "revision": 0,
+  "settings": {
+    "width": 320,
+    "height": 180,
+    "fps": { "num": 30, "den": 1 },
+    "duration": 1440000,
+    "ticksPerSecond": 240000,
+    "seed": 7,
+    "colorSpace": "srgb",
+    "sampleRate": 48000
+  },
+  "definitions": {
+    "red": {
+      "id": "red",
+      "revision": 1,
+      "kind": "react",
+      "moduleHash": "builtin:react-rect",
+      "propsSchema": {},
+      "targets": [{ "key": "root", "channels": ["x", "y", "opacity"], "coordinateSpace": "local" }],
+      "slots": [],
+      "assets": []
+    },
+    "blue": {
+      "id": "blue",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:html-rect",
+      "propsSchema": {},
+      "targets": [{ "key": "root", "channels": ["x", "y", "opacity"], "coordinateSpace": "local" }],
+      "slots": [],
+      "assets": []
+    }
+  },
+  "scenes": { "main": { "start": 0, "duration": 1440000, "rootIds": ["red", "blue"] } },
+  "instances": {
+    "red": {
+      "definitionId": "red",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "red-track",
+      "start": 0,
+      "duration": 1440000,
+      "props": { "color": "#ff0000", "width": 100, "height": 100 },
+      "locked": false
+    },
+    "blue": {
+      "definitionId": "blue",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "blue-track",
+      "start": 0,
+      "duration": 1440000,
+      "props": { "color": "#0000ff", "width": 100, "height": 100 },
+      "locked": false
+    }
+  },
+  "tracks": [
+    { "id": "red-track", "kind": "graphics", "instanceIds": ["red"], "locked": false, "muted": false },
+    { "id": "blue-track", "kind": "graphics", "instanceIds": ["blue"], "locked": false, "muted": false }
+  ],
+  "channels": {
+    "red:root:x": {
+      "target": { "instanceId": "red", "targetKey": "root", "channel": "x" },
+      "owner": "manual",
+      "locked": false,
+      "keys": [{ "id": "red-x", "at": 0, "value": 50, "interpolation": "hold" }]
+    },
+    "red:root:y": {
+      "target": { "instanceId": "red", "targetKey": "root", "channel": "y" },
+      "owner": "manual",
+      "locked": false,
+      "keys": [{ "id": "red-y", "at": 0, "value": 50, "interpolation": "hold" }]
+    },
+    "blue:root:x": {
+      "target": { "instanceId": "blue", "targetKey": "root", "channel": "x" },
+      "owner": "manual",
+      "locked": false,
+      "keys": [{ "id": "blue-x", "at": 0, "value": 75, "interpolation": "hold" }]
+    },
+    "blue:root:y": {
+      "target": { "instanceId": "blue", "targetKey": "root", "channel": "y" },
+      "owner": "manual",
+      "locked": false,
+      "keys": [{ "id": "blue-y", "at": 0, "value": 75, "interpolation": "hold" }]
+    }
+  },
+  "assets": {},
+  "mediaClips": {},
+  "score": { "phrases": [], "events": [], "windows": [], "tensions": [], "handoffs": [] },
+  "references": [],
+  "provenance": { "runtime": "0.1.0", "sdk": "0.1.0", "sources": [] }
+}

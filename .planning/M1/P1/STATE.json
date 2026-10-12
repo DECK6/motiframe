@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "phase": "P1",
+  "gate": "implementation-plan-verified",
+  "status": "pending",
+  "owner_runtime": "codex",
+  "plan_path": "docs/plan/implementation/P1-editor.md",
+  "contracts_path": "docs/plan/implementation/contracts.md",
+  "acceptance_criteria": [
+    "SDK 프로젝트를 사람이 캔버스·레이어·곡선·트림으로 수정하고 저장·재열기한다.",
+    "T06–T11 통과. AI 없이 15초 혼합 프로젝트 수동 제작·undo/redo·portable 재열기. 소스 revision 교체가 수동 채널을 보존한다.",
+    "AI execution belongs to external coding agents; product exposes SDK, CLI, skill kit and timeline"
+  ],
+  "tasks": [
+    {
+      "id": "T06",
+      "title": "공통 편집 명령·트랜잭션·undo/redo",
+      "depends_on": [
+        "T05"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T07",
+      "title": "자산 import·프록시·포터블 저장·복구",
+      "depends_on": [
+        "T06"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T08",
+      "title": "작업 화면·선택·변환·속성 패널",
+      "depends_on": [
+        "T07"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T09",
+      "title": "다중 트랙 타임라인·trim·split·재배열",
+      "depends_on": [
+        "T08"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T10",
+      "title": "키프레임·값 그래프·속도 그래프",
+      "depends_on": [
+        "T09"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T11",
+      "title": "React·HTML 소스 작성과 definition 버전 교체",
+      "depends_on": [
+        "T10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "evidence": [],
+  "updated_at": "2026-10-12T05:12:00.900695+00:00",
+  "product_name": "MotiFrame",
+  "product_name_ko": "모티프레임",
+  "project_slug": "motiframe",
+  "planned_code_root": "/Volumes/data/Dev/motiframe"
+}

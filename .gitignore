@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.runtime/
+.cache/
+artifacts/
+.sdd-workspace/
+.DS_Store
+*.tsbuildinfo

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "milestone": "M1",
+  "phase": "P0",
+  "gate": "implementation-plan-verified",
+  "status": "in-progress",
+  "owner_runtime": "codex",
+  "plan_path": "docs/plan/implementation/P0-core.md",
+  "contracts_path": "docs/plan/implementation/contracts.md",
+  "acceptance_criteria": [
+    "외부 코딩 에이전트가 React·HTML을 작성하고 하나의 시계로 6초 영상을 출력한다.",
+    "T01–T05 통과. React 키워드→HTML/SVG 가림→영상 인계, 역순 seek 일치, 180프레임·오디오 동기, 격리 취소/복구, 세 OS smoke 증거. 미검증 OS는 pending으로 남긴다.",
+    "AI execution belongs to external coding agents; product exposes SDK, CLI, skill kit and timeline"
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "React+HTML 한 프레임의 수직 구현",
+      "depends_on": [],
+      "status": "complete"
+    },
+    {
+      "id": "T02",
+      "title": "정수 시간·곡선·공통 프레임 평가기",
+      "depends_on": [
+        "T01"
+      ],
+      "status": "in-progress"
+    },
+    {
+      "id": "T03",
+      "title": "작성 SDK·대상 소유권·프레임 준비 경계",
+      "depends_on": [
+        "T02"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T04",
+      "title": "6초 혼합 프레이즈의 영상·오디오 출력",
+      "depends_on": [
+        "T03"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "T05",
+      "title": "실행 격리·취소·세 OS 코어 smoke",
+      "depends_on": [
+        "T04"
+      ],
+      "status": "pending"
+    }
+  ],
+  "evidence": [
+    {
+      "task": "T01",
+      "red": "mixed stage NOT_IMPLEMENTED assertion failed",
+      "green": "mixed-static.test.ts passed; CLI PNG capture succeeded; build succeeded; tsc+biome passed",
+      "artifacts": [
+        "artifacts/T01/mixed-static.png",
+        "artifacts/T01/cli-frame.png"
+      ]
+    }
+  ],
+  "updated_at": "2026-10-12T05:12:00.900384+00:00",
+  "product_name": "MotiFrame",
+  "product_name_ko": "모티프레임",
+  "project_slug": "motiframe",
+  "planned_code_root": "/Volumes/data/Dev/motiframe"
+}

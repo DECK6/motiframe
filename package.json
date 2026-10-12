@@ -1,0 +1,42 @@
+{
+  "name": "motiframe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup-runtime.mjs",
+    "test": "node scripts/test.mjs",
+    "test:unit": "node scripts/test.mjs tests/unit",
+    "test:integration": "node scripts/test.mjs tests/integration",
+    "test:e2e": "node scripts/test.mjs tests/e2e",
+    "check": "tsc --noEmit && biome check .",
+    "build": "node scripts/build.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "motiframe": "node scripts/cli.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.6",
+    "puppeteer-core": "25.13.0",
+    "@puppeteer/browsers": "3.2.4",
+    "esbuild": "0.28.2"
+  },
+  "devDependencies": {
+    "vite": "8.3.4",
+    "vitest": "5.0.3",
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.5",
+    "pngjs": "7.0.0",
+    "@types/pngjs": "6.0.5",
+    "tsx": "4.23.15",
+    "@biomejs/biome": "2.5.15"
+  }
+}
