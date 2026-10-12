@@ -53,9 +53,17 @@
       "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
       "platform": "darwin-arm64",
       "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    },
+    {
+      "command": "bun run check && bun run build && bun run test",
+      "exit_code": 0,
+      "result": "Fresh post-GPU-fix run:196 files checked;production build;53 suites/188 tests pass in45.99s (2026-10-12 16:13 KST).",
+      "commit": "95a32eb",
+      "platform": "darwin-arm64",
+      "artifact": "artifacts/final-verification/local-checks.json"
     }
   ],
-  "updated_at": "2026-10-12T06:53:08.995574+00:00",
+  "updated_at": "2026-10-12T07:17:42.934219+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",

@@ -97,9 +97,24 @@
       "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
       "platform": "darwin-arm64",
       "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    },
+    {
+      "command": "bun run check && bun run build && bun run test",
+      "exit_code": 0,
+      "result": "Fresh post-GPU-fix run:196 files checked;production build;53 suites/188 tests pass in45.99s (2026-10-12 16:13 KST).",
+      "commit": "95a32eb",
+      "platform": "darwin-arm64",
+      "artifact": "artifacts/final-verification/local-checks.json"
+    },
+    {
+      "result": "Fresh extracted native RC: 13 commands / 11 checks pass under restricted system-only PATH; full 180 frames at 30 fps, exact 48 kHz pulse sample 72000, complete decode, portable reopen pixels identical, SDK Three/Tone runtime + strict NodeNext, DEXA English UI + 2 offline fonts + zero external requests/page errors.",
+      "artifact": "artifacts/final-release-verification/최종 독립 실행 1791789401/report.json",
+      "archive": "artifacts/releases/motiframe-0.1.0-darwin-arm64-rc-027c27b57bfe.tar.gz",
+      "sha256": "027c27b57bfee53127bba9461bc7e74a8a462833fd8edbc5781e2025ebc6c4d6",
+      "scope": "Local macOS 26 ARM64. Not a notarized public installer; other native platforms pending."
     }
   ],
-  "updated_at": "2026-10-12T06:53:08.995574+00:00",
+  "updated_at": "2026-10-12T08:50:48.866985+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",
