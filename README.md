@@ -4,6 +4,14 @@ MotiFrame is a local motion authoring tool for external coding agents and people
 
 This is a **local release candidate**, verified on macOS ARM64. The standalone RC requires macOS 26 or newer. Other operating systems have CI configuration but no completed native installation evidence in this release. See [release acceptance](docs/release-acceptance.md) for the exact verification boundary.
 
+## Make it move
+
+[![MotiFrame — make it move](docs/media/make-it-move.png)](docs/media/make-it-move.mp4)
+
+[Watch the 10-second demo](docs/media/make-it-move.mp4) · [Download the editable project](https://github.com/DECK6/motiframe/releases/tag/v0.1.0-rc.1)
+
+The promo is authored and rendered in MotiFrame with editable typography and a percussion-based soundtrack. Sound sources and modifications are recorded in the [demo credits](docs/media/sound-credits.md).
+
 ## Start
 
 For the standalone macOS RC, extract the archive into a writable folder and open `launch.command`. Keep its terminal open and use the loopback URL it prints. In that folder, `./launch.sh --verify` checks packaged file hashes.
