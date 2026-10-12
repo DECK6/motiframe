@@ -18,6 +18,8 @@ Start with `motiframe doctor --json`. In a source checkout, replace `motiframe` 
 | Media or audio budget error | Reduce the decoded range or media dimensions and retry as a new operation. |
 | Chromium sandbox or runtime failure | Check the pinned runtime and normal-user sandbox support; disabling the sandbox is not a supported fix. |
 
+On macOS, a separate Chromium GPU child was observed stalling in its dynamic loader: the page could load while animation frames and screenshots never completed. MotiFrame uses an in-process GPU on macOS and bounds Chromium protocol calls to 30 seconds. Author code remains in the OS-sandboxed renderer; GPU work shares the browser host rather than a separate process. If a capture still times out, preserve its JSON error and run the core smoke test from the installation guide. Do not change macOS security policy or disable the renderer sandbox.
+
 ## Recover a project
 
 Save failures leave the in-memory document uncommitted. Project saves preserve valid earlier documents in a sibling snapshot directory. Inspect recovery candidates before choosing one:

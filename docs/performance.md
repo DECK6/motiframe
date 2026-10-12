@@ -2,7 +2,7 @@
 
 The recorded local run measures `PreviewEngine.frame`: Chromium layout, video decode, PNG capture and the frame cache. It does not measure editor input latency or a sustained playback frame rate.
 
-Evidence: `artifacts/performance/darwin-arm64-1791784683497/report.json`. The report has `ok: true` and zero failed frames in both passes.
+Evidence: `artifacts/performance/darwin-arm64-1791789259827/report.json`. The report has `ok: true` and zero failed frames in both passes. This run follows the macOS in-process GPU compatibility fix; GPU work shares the browser host while the author renderer keeps its sandbox.
 
 | Environment | Recorded value |
 | --- | --- |
@@ -16,12 +16,12 @@ Evidence: `artifacts/performance/darwin-arm64-1791784683497/report.json`. The re
 
 | Pass | p50 | p95 | Failed frames |
 | --- | ---: | ---: | ---: |
-| First sequence, including initial preparation | 66.263 ms | 85.944 ms | 0 |
-| Same ticks on the same engine, cache hits allowed | 0.511 ms | 0.717 ms | 0 |
+| First sequence, including initial preparation | 65.920 ms | 84.333 ms | 0 |
+| Same ticks on the same engine, cache hits allowed | 0.601 ms | 0.925 ms | 0 |
 
-The first individual seek took 1788.547 ms. The p95 does not describe that startup delay. The warm result is predominantly a cache result and must not be presented as the time to render an uncached frame. The measured warm p95 is below the 200 ms seek target for this fixture and machine only.
+The first individual seek took 2236.481 ms. The p95 does not describe that startup delay. The warm result is predominantly a cache result and must not be presented as the time to render an uncached frame. The measured warm p95 is below the 200 ms seek target for this fixture and machine only.
 
-The orchestrator's observed peak RSS was 260685824 bytes (about 248.6 MiB). Chromium and FFmpeg child-process memory was not sampled. UI response p95, sustained playback misses, other machines and operating systems remain unmeasured.
+The orchestrator's observed peak RSS was 330481664 bytes (about 315.2 MiB). Chromium and FFmpeg child-process memory was not sampled. UI response p95, sustained playback misses, other machines and operating systems remain unmeasured.
 
 ## Reproduce
 

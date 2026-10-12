@@ -2,7 +2,7 @@
 
 Status: **local release candidate; P4 is not fully complete**. This record separates executed technical checks from pending platform, agent-host and human perception checks.
 
-The final integrated run on 2026-10-12 passed `check`, build and all 53 test files / 188 tests (exit 0; suite duration 47.44 seconds). It includes the DEXA frontend, writer reclamation, agent curve scope and final output-preservation/download fixes. This is local evidence, not an additional operating-system run.
+The final integrated run on 2026-10-12 passed `check`, build and all 53 test files / 188 tests (exit 0; suite duration 45.99 seconds). The 16:13 KST run includes the DEXA frontend, writer reclamation, agent curve scope, output-preservation/download fixes and macOS GPU startup recovery. UI E2E browsers use the same GPU mode and retain their original assertions. This is local evidence, not an additional operating-system run.
 
 The native Studio preview loaded its local fonts and showed the DEXA Paper shell (`rgb(245, 241, 230)`) without horizontal page overflow at a viewport width of 1843 pixels. Other viewport widths and a complete accessibility audit are not established by that observation. See [DEXA design](dexa-design.md).
 
@@ -28,7 +28,7 @@ The example projects, custom source and synthetic media live under `examples/sho
 
 The standalone native RC targets macOS ARM64 and requires macOS 26 or newer. Its Node, Chromium and relocated FFmpeg libraries are packaged locally. It is ad-hoc signed for local use and is not a notarized public installer. Windows, Linux and Intel macOS smoke workflows are configured; their native installation/output runs remain unverified.
 
-The [performance record](performance.md) measured first-pass p95 85.944 ms and repeated-tick warm p95 0.717 ms on an Apple M4 Pro at 720p. The first seek was 1788.547 ms. UI input latency and child-process memory remain unmeasured.
+The [performance record](performance.md) measured first-pass p95 84.333 ms and repeated-tick warm p95 0.925 ms on an Apple M4 Pro at 720p. The first seek was 2236.481 ms. UI input latency and child-process memory remain unmeasured.
 
 ## Agent and motion review
 

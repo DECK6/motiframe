@@ -1,12 +1,12 @@
 import { mkdtemp, readFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import puppeteer from "puppeteer-core";
 import { expect, it } from "vitest";
 import { runtime } from "../../apps/runner/src/environment";
 import { startStudio } from "../../apps/runner/src/server";
 import { loadProject, saveProject } from "../../packages/document/src/persistence";
 import { createStarterProject } from "../../packages/document/src/starter";
+import { launchReviewBrowser } from "../helpers/browser";
 import { expectOk } from "../helpers/result";
 
 it("commits scaled canvas drags, undoes them, edits curves and keeps preview moving during playback", async () => {
@@ -23,11 +23,7 @@ it("commits scaled canvas drags, undoes them, edits curves and keeps preview mov
   doc.channels["title:root:y"].keys[0].value = 120;
   expectOk(await saveProject(doc, file));
   const studio = expectOk(await startStudio(file, { port: 0 }));
-  const browser = await puppeteer.launch({
-    executablePath: (await runtime()).chrome,
-    headless: true,
-    args: ["--force-color-profile=srgb"],
-  });
+  const browser = await launchReviewBrowser((await runtime()).chrome);
   const page = await browser.newPage();
   page.setDefaultTimeout(8000);
   await page.setViewport({ width: 1440, height: 1000 });

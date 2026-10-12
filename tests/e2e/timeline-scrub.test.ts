@@ -1,12 +1,12 @@
 import { mkdtemp } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import puppeteer from "puppeteer-core";
 import { expect, it } from "vitest";
 import { runtime } from "../../apps/runner/src/environment";
 import { startStudio } from "../../apps/runner/src/server";
 import { saveProject } from "../../packages/document/src/persistence";
 import { createStarterProject } from "../../packages/document/src/starter";
+import { launchReviewBrowser } from "../helpers/browser";
 import { expectOk } from "../helpers/result";
 
 it("drags the CTI across time labels continuously without selecting text and keeps capture outside the ruler", async () => {
@@ -14,7 +14,7 @@ it("drags the CTI across time labels continuously without selecting text and kee
     file = path.join(dir, "project.json");
   expectOk(await saveProject(createStarterProject(), file));
   const studio = expectOk(await startStudio(file, { port: 0 }));
-  const browser = await puppeteer.launch({ executablePath: (await runtime()).chrome, headless: true });
+  const browser = await launchReviewBrowser((await runtime()).chrome);
   const page = await browser.newPage();
   await page.setViewport({ width: 1600, height: 1000 });
   try {

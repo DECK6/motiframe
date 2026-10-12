@@ -22,7 +22,7 @@ tags: [motion-graphics, implementation-plan]
 
 **Spec:** [[30-context/projects/motion-score-studio/plan]].
 **Contracts:** [[30-context/projects/motion-score-studio/implementation/contracts]].
-**Code root:** `/Volumes/data/Dev/motiframe` — 현재 존재하지 않으며 구현 시작 시 생성할 예정 경로.
+**Code root:** `/Volumes/data/Dev/motiframe` — 구현 저장소. 현재 검증 상태는 `.planning/M1/P*/STATE.json`과 구현 devlog를 따른다.
 
 **제품명 확정:** 모티프레임(MotiFrame). 시각 편집기는 MotiFrame Studio, 라이브러리는 MotiFrame SDK, 명령은 `motiframe`, 제작 스킬은 MotiFrame Skill(`skills/motiframe/SKILL.md`)로 표기한다. 사용자 명명 결정일: 2026-10-12.
 

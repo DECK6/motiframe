@@ -71,7 +71,11 @@ export async function openStage(
     browser = await puppeteer.launch({
       executablePath: config.chrome,
       headless: true,
-      args: ["--force-color-profile=srgb"],
+      protocolTimeout: 30000,
+      // On macOS a separate GPU child can stall in dyld before its compositor
+      // starts, reproduced with both source and relocated Chromium. Keep the
+      // author-code renderer sandboxed; GPU work shares the browser host here.
+      args: ["--force-color-profile=srgb", ...(process.platform === "darwin" ? ["--in-process-gpu"] : [])],
     });
     const page = await browser.newPage();
     const origin = `http://127.0.0.1:${address.port}`;

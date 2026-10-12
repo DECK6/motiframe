@@ -3,13 +3,13 @@ import { mkdtemp, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import puppeteer from "puppeteer-core";
 import { expect, it } from "vitest";
 import { projectRoot, runtime } from "../../apps/runner/src/environment";
 import { startStudio } from "../../apps/runner/src/server";
 import { projectContentHash } from "../../packages/document/src/history";
 import { loadProject, saveProject } from "../../packages/document/src/persistence";
 import { createStarterProject } from "../../packages/document/src/starter";
+import { launchReviewBrowser } from "../helpers/browser";
 import { expectOk } from "../helpers/result";
 
 it("round-trips external CLI edits through the live review UI and shared undo without losing manual work", async () => {
@@ -18,7 +18,7 @@ it("round-trips external CLI edits through the live review UI and shared undo wi
   expectOk(await saveProject(createStarterProject("agent-roundtrip"), file));
   const studio = expectOk(await startStudio(file, { port: 0 }));
   const config = await runtime();
-  const browser = await puppeteer.launch({ executablePath: config.chrome, headless: true });
+  const browser = await launchReviewBrowser(config.chrome);
   const page = await browser.newPage();
   page.setDefaultTimeout(8000);
   await page.setViewport({ width: 1440, height: 1000 });

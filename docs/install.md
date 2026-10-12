@@ -8,6 +8,8 @@ Extract `motiframe-<version>-darwin-arm64-rc-<hash>.tar.gz` into a writable fold
 
 This RC requires macOS 26.0 or newer on ARM64, as recorded by its bundled native libraries. It includes pinned Node and Chromium, FFmpeg/ffprobe with relocated native libraries, application dependencies, fonts, skills, and built application files. It needs no global Node, Bun, or FFmpeg and performs no installation or runtime download. Native libraries are ad-hoc signed for this local RC; it is not a notarized public macOS installer. Linux and Windows standalone binaries remain pending native packaging and verification. The default launcher selects an available loopback port.
 
+On macOS, headless rendering runs GPU work inside the Chromium browser host to avoid a separate GPU child's observed startup stall. Author code remains in the OS-sandboxed renderer, but GPU work no longer has its own process boundary. Chromium protocol calls have a 30-second timeout. No global macOS policy is changed.
+
 From a terminal inside the extracted folder:
 
 ```sh
