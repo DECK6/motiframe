@@ -17,3 +17,5 @@
 
 - T01 GREEN: actual mixed DOM and PNG pixels passed; CLI receipt records both authoring kinds. Node24/Chromium pinned locally. Build and type/lint checks pass.
 - T02 RED: time/curve/compiler five expected assertions failed. GREEN: 10 unit tests passed; complete suite before T03 tests was 11/11.
+
+- T03 RED: unsupported time, missing words definition, superseded render hang; additional nested-slot regression caught DUPLICATE_TARGET. GREEN: 15 tests, check pass. Author content uses ShadowRoot for CSS isolation inside one ownerDocument (not per-element iframe).
