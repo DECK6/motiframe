@@ -2,8 +2,8 @@
   "schema_version": 1,
   "milestone": "M1",
   "phase": "P1",
-  "gate": "implementation-plan-verified",
-  "status": "pending",
+  "gate": "local-editor-verified",
+  "status": "complete",
   "owner_runtime": "codex",
   "plan_path": "docs/plan/implementation/P1-editor.md",
   "contracts_path": "docs/plan/implementation/contracts.md",
@@ -19,7 +19,7 @@
       "depends_on": [
         "T05"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T07",
@@ -27,7 +27,7 @@
       "depends_on": [
         "T06"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T08",
@@ -35,7 +35,7 @@
       "depends_on": [
         "T07"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T09",
@@ -43,7 +43,7 @@
       "depends_on": [
         "T08"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T10",
@@ -51,7 +51,7 @@
       "depends_on": [
         "T09"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T11",
@@ -59,13 +59,29 @@
       "depends_on": [
         "T10"
       ],
-      "status": "pending"
+      "status": "complete"
     }
   ],
-  "evidence": [],
-  "updated_at": "2026-10-12T05:12:00.900695+00:00",
+  "evidence": [
+    {
+      "command": "bun run check; bun run build; bun run test",
+      "exit_code": 0,
+      "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
+      "platform": "darwin-arm64",
+      "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    }
+  ],
+  "updated_at": "2026-10-12T06:53:08.995574+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",
-  "planned_code_root": "/Volumes/data/Dev/motiframe"
+  "planned_code_root": "/Volumes/data/Dev/motiframe",
+  "remaining_limits": [
+    "Nested transformed-parent canvas drag requires explicit property editing.",
+    "Browser-only mode supports built-in compositions; custom source/media rendering uses local runner."
+  ],
+  "implementation_notes": [
+    "English, external-agent-first UI; DEXA Paper/orange shell and Ink/cyan preview, bundled local fonts.",
+    "Shared document, frame clock, React/HTML stage; Three.js and Tone.js default SDK tools."
+  ]
 }

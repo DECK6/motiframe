@@ -1,0 +1,52 @@
+{
+  "skillVersion": "0.1.0",
+  "sdkVersion": "0.1.0",
+  "cliProtocolVersion": 1,
+  "documentSchemaVersion": 1,
+  "requiredModelProviders": [],
+  "sourceSnapshots": [
+    {
+      "id": "motion-rhythm",
+      "captured": "2026-10-12",
+      "adaptation": "self-contained choreography and evidence boundaries; renderer and personal preferences remain project-scoped",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "b4fcf87b53711c7788d13f1471d61095cdb814884ee06bb68f6858a71e05e20a"
+        },
+        {
+          "path": "references/default-direction.md",
+          "sha256": "6747257df520b47109767d70c53f52a3892500cfcdd766887eb458e44b4b69e4"
+        },
+        {
+          "path": "references/speed-tension-rhythm.md",
+          "sha256": "22dc8415d952724c88e9ce388cc5b8522f37df1185ae84a3c10a8b90a439bd3f"
+        },
+        {
+          "path": "references/motion-score.md",
+          "sha256": "515c1e430d2759205ffecbec879b3885279c1cfa5ee957deb139ef30d7b1d393"
+        },
+        {
+          "path": "references/review.md",
+          "sha256": "56debd4c50ea2806e7d711af34a06eb406cc01db7b40e5319be46e3f7dc56f48"
+        }
+      ]
+    }
+  ],
+  "knowledge": {
+    "sourceSchemaVersion": "1.0",
+    "sourceGenerated": "2026-09-29",
+    "sourceSha256": "462cdcfd4ce3bed845a408a318cb72e117eeecd8261366c5766d94f31eecb913",
+    "snapshotHash": "3bb5e4c6dd01f222d720be1e2e8814d5e2cfc1e4a66dfd2d6bffce7f42be904a"
+  },
+  "defaultTools": {
+    "three": {
+      "version": "0.186.1",
+      "role": "absolute-tick 3D scene authoring"
+    },
+    "tone": {
+      "version": "15.1.22",
+      "role": "offline event-score synthesis"
+    }
+  }
+}

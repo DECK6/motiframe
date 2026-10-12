@@ -1,0 +1,66 @@
+{
+  "manifest": {
+    "id": "title",
+    "revision": 2,
+    "kind": "react",
+    "moduleHash": "",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "fontSize": {
+          "type": "number"
+        },
+        "fontWeight": {
+          "type": "number"
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      }
+    },
+    "targets": [
+      {
+        "key": "root",
+        "channels": [
+          "x",
+          "y",
+          "z",
+          "scaleX",
+          "scaleY",
+          "rotateX",
+          "rotateY",
+          "rotateZ",
+          "opacity",
+          "clipProgress",
+          "props.text"
+        ],
+        "coordinateSpace": "local"
+      },
+      {
+        "key": "heading",
+        "channels": [
+          "opacity"
+        ],
+        "coordinateSpace": "local"
+      }
+    ],
+    "slots": [],
+    "assets": []
+  },
+  "entry": "index.tsx",
+  "files": {
+    "index.tsx": "import { defineReactElement, MotionTarget } from '@motiframe/authoring';\nconst manifest = {\n  \"id\": \"title\",\n  \"revision\": 2,\n  \"kind\": \"react\",\n  \"moduleHash\": \"\",\n  \"propsSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"text\": {\n        \"type\": \"string\"\n      },\n      \"fontSize\": {\n        \"type\": \"number\"\n      },\n      \"fontWeight\": {\n        \"type\": \"number\"\n      },\n      \"fontFamily\": {\n        \"type\": \"string\"\n      },\n      \"color\": {\n        \"type\": \"string\"\n      },\n      \"width\": {\n        \"type\": \"number\"\n      },\n      \"height\": {\n        \"type\": \"number\"\n      }\n    }\n  },\n  \"targets\": [\n    {\n      \"key\": \"root\",\n      \"channels\": [\n        \"x\",\n        \"y\",\n        \"z\",\n        \"scaleX\",\n        \"scaleY\",\n        \"rotateX\",\n        \"rotateY\",\n        \"rotateZ\",\n        \"opacity\",\n        \"clipProgress\",\n        \"props.text\"\n      ],\n      \"coordinateSpace\": \"local\"\n    },\n    {\n      \"key\": \"heading\",\n      \"channels\": [\n        \"opacity\"\n      ],\n      \"coordinateSpace\": \"local\"\n    }\n  ],\n  \"slots\": [],\n  \"assets\": []\n};\nexport default defineReactElement(manifest, ({props}) => (\n  <MotionTarget targetKey=\"heading\">\n    <div style={{color:String(props.color ?? '#ffffff'),fontSize:Number(props.fontSize ?? 84),fontWeight:Number(props.fontWeight ?? 700),fontFamily:String(props.fontFamily ?? 'sans-serif'),width:Number(props.width ?? 1050),whiteSpace:'pre'}}>\n      {String(props.text ?? 'Editable motion')}\n    </div>\n  </MotionTarget>\n));\n"
+  }
+}

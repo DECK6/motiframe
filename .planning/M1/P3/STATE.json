@@ -2,8 +2,8 @@
   "schema_version": 1,
   "milestone": "M1",
   "phase": "P3",
-  "gate": "implementation-plan-verified",
-  "status": "pending",
+  "gate": "local-agent-roundtrip-verified",
+  "status": "complete",
   "owner_runtime": "codex",
   "plan_path": "docs/plan/implementation/P3-agents.md",
   "contracts_path": "docs/plan/implementation/contracts.md",
@@ -19,7 +19,7 @@
       "depends_on": [
         "T07"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T17",
@@ -28,7 +28,7 @@
         "T16",
         "T12"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T18",
@@ -37,7 +37,7 @@
         "T17",
         "T15"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T19",
@@ -45,7 +45,7 @@
       "depends_on": [
         "T18"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T20",
@@ -54,7 +54,7 @@
         "T19",
         "T11"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T21",
@@ -62,13 +62,29 @@
       "depends_on": [
         "T20"
       ],
-      "status": "pending"
+      "status": "complete"
     }
   ],
-  "evidence": [],
-  "updated_at": "2026-10-12T05:12:00.898489+00:00",
+  "evidence": [
+    {
+      "command": "bun run check; bun run build; bun run test",
+      "exit_code": 0,
+      "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
+      "platform": "darwin-arm64",
+      "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    }
+  ],
+  "updated_at": "2026-10-12T06:53:08.995574+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",
-  "planned_code_root": "/Volumes/data/Dev/motiframe"
+  "planned_code_root": "/Volumes/data/Dev/motiframe",
+  "remaining_limits": [
+    "Reference research belongs to external-agent CLI, removed from default browser workflow by user direction.",
+    "Portable skill instruction review and actual CLI roundtrip are verified; independent third-party agent hosts remain unverified."
+  ],
+  "implementation_notes": [
+    "English, external-agent-first UI; DEXA Paper/orange shell and Ink/cyan preview, bundled local fonts.",
+    "Shared document, frame clock, React/HTML stage; Three.js and Tone.js default SDK tools."
+  ]
 }

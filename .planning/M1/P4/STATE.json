@@ -2,8 +2,8 @@
   "schema_version": 1,
   "milestone": "M1",
   "phase": "P4",
-  "gate": "implementation-plan-verified",
-  "status": "pending",
+  "gate": "local-release-candidate",
+  "status": "in-progress",
   "owner_runtime": "codex",
   "plan_path": "docs/plan/implementation/P4-release.md",
   "contracts_path": "docs/plan/implementation/contracts.md",
@@ -19,7 +19,7 @@
       "depends_on": [
         "T21"
       ],
-      "status": "pending"
+      "status": "in-progress"
     },
     {
       "id": "T23",
@@ -27,7 +27,7 @@
       "depends_on": [
         "T22"
       ],
-      "status": "pending"
+      "status": "in-progress"
     },
     {
       "id": "T24",
@@ -35,7 +35,7 @@
       "depends_on": [
         "T23"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T25",
@@ -43,13 +43,31 @@
       "depends_on": [
         "T24"
       ],
-      "status": "pending"
+      "status": "in-progress"
     }
   ],
-  "evidence": [],
-  "updated_at": "2026-10-12T05:12:00.897609+00:00",
+  "evidence": [
+    {
+      "command": "bun run check; bun run build; bun run test",
+      "exit_code": 0,
+      "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
+      "platform": "darwin-arm64",
+      "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    }
+  ],
+  "updated_at": "2026-10-12T06:53:08.995574+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",
-  "planned_code_root": "/Volumes/data/Dev/motiframe"
+  "planned_code_root": "/Volumes/data/Dev/motiframe",
+  "remaining_limits": [
+    "UI response latency and child-process peak memory unmeasured.",
+    "Native standalone only darwin-arm64 / macOS26; Windows/Linux/macOS x64 packaging and native verification pending.",
+    "Three showcase outputs pass technical checks; full-speed perceptual/audio approval unverified.",
+    "Final archive verification report pending."
+  ],
+  "implementation_notes": [
+    "English, external-agent-first UI; DEXA Paper/orange shell and Ink/cyan preview, bundled local fonts.",
+    "Shared document, frame clock, React/HTML stage; Three.js and Tone.js default SDK tools."
+  ]
 }

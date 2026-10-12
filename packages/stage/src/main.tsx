@@ -1,6 +1,13 @@
+import * as React from "react";
 import { type ReactNode, useLayoutEffect } from "react";
+import * as JSX from "react/jsx-runtime";
 import { createRoot, type Root } from "react-dom/client";
+import * as THREE from "three";
 import { builtinDefinition } from "../../authoring/src/builtins";
+import { defineHtmlElement } from "../../authoring/src/html";
+import { defineReactElement, MotionSlot, MotionTarget } from "../../authoring/src/react";
+import { ThreeCanvas } from "../../authoring/src/three";
+import * as ToneTools from "../../authoring/src/tone";
 import type { ElementDefinition } from "../../authoring/src/types";
 import { compileProject, type MotionIR } from "../../core/src/compile";
 import { evaluateFrame, type FramePlan } from "../../core/src/evaluate";
@@ -10,6 +17,7 @@ import { applyMotion } from "./compositor";
 import { FrameBarrier, untilReady } from "./frame-barrier";
 import { collectTargets } from "./targets";
 export type Rect = { x: number; y: number; width: number; height: number };
+export type StageAssets = { fonts: { family: string; url: string }[] };
 export type FrameReceipt = {
   frameToken: string;
   documentRevision: number;
@@ -28,10 +36,16 @@ export class StagePort {
   private elements = new Map<string, Mounted>();
   private barrier = new FrameBarrier();
   private renderError: Error | undefined;
+  private fonts: FontFace[] = [];
+  private definitions: Record<string, ElementDefinition> = {};
+  registerDefinition(id: string, definition: ElementDefinition) {
+    this.definitions[id] = definition;
+  }
   constructor(private container: HTMLElement) {}
   async load(
     input: ProjectDocument | MotionIR,
     definitions?: Record<string, ElementDefinition>,
+    assets?: StageAssets,
   ): Promise<Result<void>> {
     await this.dispose();
     const compiled = "document" in input ? ok(input) : compileProject(input);
@@ -46,10 +60,19 @@ export class StagePort {
       background: "#000",
     });
     try {
+      for (const font of assets?.fonts ?? []) {
+        const face = new FontFace(font.family, `url(${JSON.stringify(font.url)})`);
+        await face.load();
+        document.fonts.add(face);
+        this.fonts.push(face);
+      }
       for (const id of this.ir.order) {
         const instance = project.instances[id];
         const manifest = project.definitions[instance.definitionId];
-        const definition = definitions?.[instance.definitionId] ?? builtinDefinition(manifest);
+        const definition =
+          definitions?.[instance.definitionId] ??
+          this.definitions[`${manifest.id}@${manifest.revision}`] ??
+          builtinDefinition(manifest);
         const host = document.createElement("div");
         host.dataset.instance = id;
         host.dataset.motionTarget = "root";
@@ -166,7 +189,11 @@ export class StagePort {
           applyMotion(target, values);
         }
         await untilReady(
-          Promise.all([...element.content.querySelectorAll("img")].map((i) => i.decode())),
+          Promise.all(
+            [...element.content.querySelectorAll("img")]
+              .filter((i) => instance.visible && i.getAttribute("src"))
+              .map((i) => i.decode()),
+          ),
           signal,
         );
       }
@@ -203,6 +230,8 @@ export class StagePort {
     this.barrier.cancel();
     for (const e of this.elements.values()) e.root?.unmount();
     this.elements.clear();
+    for (const font of this.fonts) document.fonts.delete(font);
+    this.fonts = [];
     this.container.replaceChildren();
     this.ir = undefined;
   }
@@ -212,6 +241,22 @@ if (!host) throw new Error("Stage container is missing");
 declare global {
   interface Window {
     motiframe: StagePort;
+    MotiFrameSDK: {
+      ThreeCanvas: typeof ThreeCanvas;
+      defineReactElement: typeof defineReactElement;
+      defineHtmlElement: typeof defineHtmlElement;
+      MotionTarget: typeof MotionTarget;
+      MotionSlot: typeof MotionSlot;
+    };
+    MotiFrameReact: typeof React;
+    MotiFrameJSX: typeof JSX;
+    MotiFrameThree: typeof THREE;
+    MotiFrameTone: typeof ToneTools;
   }
 }
 window.motiframe = new StagePort(host);
+window.MotiFrameSDK = { defineReactElement, defineHtmlElement, MotionTarget, MotionSlot, ThreeCanvas };
+window.MotiFrameThree = THREE;
+window.MotiFrameTone = ToneTools;
+window.MotiFrameReact = React;
+window.MotiFrameJSX = JSX;

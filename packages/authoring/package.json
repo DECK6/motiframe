@@ -1,6 +1,49 @@
 {
   "name": "@motiframe/authoring",
   "version": "0.1.0",
-  "private": true,
-  "type": "module"
+  "description": "React and HTML authoring SDK for MotiFrame's shared motion stage",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./types/packages/authoring/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/packages/authoring/src/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./three": {
+      "types": "./types/packages/authoring/src/three.d.ts",
+      "import": "./dist/three.js",
+      "default": "./dist/three.js"
+    },
+    "./tone": {
+      "types": "./types/packages/authoring/src/tone.d.ts",
+      "import": "./dist/tone.js",
+      "default": "./dist/tone.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "zod": "4.6.6",
+    "tone": "15.1.22"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "@types/react": "^19.0.0",
+    "three": "0.186.1",
+    "@types/three": "^0.186.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/three": {
+      "optional": true
+    }
+  }
 }

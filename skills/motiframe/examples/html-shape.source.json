@@ -1,0 +1,47 @@
+{
+  "manifest": {
+    "id": "shape",
+    "revision": 2,
+    "kind": "html",
+    "moduleHash": "",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      }
+    },
+    "targets": [
+      {
+        "key": "root",
+        "channels": [
+          "x",
+          "y",
+          "z",
+          "scaleX",
+          "scaleY",
+          "rotateX",
+          "rotateY",
+          "rotateZ",
+          "opacity",
+          "clipProgress",
+          "props.text"
+        ],
+        "coordinateSpace": "local"
+      }
+    ],
+    "slots": [],
+    "assets": []
+  },
+  "entry": "index.ts",
+  "files": {
+    "index.ts": "import { defineHtmlElement } from '@motiframe/authoring';\nconst manifest = {\n  \"id\": \"shape\",\n  \"revision\": 2,\n  \"kind\": \"html\",\n  \"moduleHash\": \"\",\n  \"propsSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"color\": {\n        \"type\": \"string\"\n      },\n      \"width\": {\n        \"type\": \"number\"\n      },\n      \"height\": {\n        \"type\": \"number\"\n      }\n    }\n  },\n  \"targets\": [\n    {\n      \"key\": \"root\",\n      \"channels\": [\n        \"x\",\n        \"y\",\n        \"z\",\n        \"scaleX\",\n        \"scaleY\",\n        \"rotateX\",\n        \"rotateY\",\n        \"rotateZ\",\n        \"opacity\",\n        \"clipProgress\",\n        \"props.text\"\n      ],\n      \"coordinateSpace\": \"local\"\n    }\n  ],\n  \"slots\": [],\n  \"assets\": []\n};\nexport default defineHtmlElement(manifest, {\n  html: '<div class=\"shape\"></div>',\n  css: '.shape { border-radius: 12px; box-sizing: border-box; }',\n  bindings: [\n    {selector:'.shape',prop:'color',kind:'style',name:'background-color'},\n    {selector:'.shape',prop:'width',kind:'style',name:'width',unit:'px'},\n    {selector:'.shape',prop:'height',kind:'style',name:'height',unit:'px'}\n  ]\n});\n"
+  }
+}

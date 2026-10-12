@@ -1,0 +1,1423 @@
+{
+  "schemaVersion": 1,
+  "id": "slow-tension-10s",
+  "revision": 0,
+  "settings": {
+    "width": 640,
+    "height": 360,
+    "fps": {
+      "num": 30,
+      "den": 1
+    },
+    "duration": 2400000,
+    "ticksPerSecond": 240000,
+    "seed": 917,
+    "colorSpace": "srgb",
+    "sampleRate": 48000
+  },
+  "definitions": {
+    "title": {
+      "id": "title",
+      "revision": 1,
+      "kind": "react",
+      "moduleHash": "builtin:react-text",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "fontSize": {
+            "type": "number"
+          },
+          "fontWeight": {
+            "type": "number"
+          },
+          "fontFamily": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "shape": {
+      "id": "shape",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:html-rect",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "video": {
+      "id": "video",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:media",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          },
+          "assetId": {
+            "type": "string"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "audio": {
+      "id": "audio",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:audio",
+      "propsSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-disc@1": {
+      "id": "showcase-disc",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "e47e0698a7930b9992fd307447c4d9ffd64ac0ab0134077fc3e933b96015a7e3",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-ring@1": {
+      "id": "showcase-ring",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "2a081f5f7d24570d786cc447361bb0cf17fa9e2fe1eae25cad470d430dc376d9",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-field@1": {
+      "id": "showcase-field",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "af6de0da4352fc1d2e9cce1b232850e2e82246b543f94d5c4688f07bc9db7143",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    }
+  },
+  "scenes": {
+    "main": {
+      "start": 0,
+      "duration": 2400000,
+      "rootIds": [
+        "field",
+        "slow-eyebrow",
+        "slow-footer",
+        "slow-rule",
+        "line-1",
+        "line-2",
+        "aside",
+        "anchor",
+        "orb",
+        "distance",
+        "soundtrack"
+      ]
+    }
+  },
+  "instances": {
+    "field": {
+      "definitionId": "showcase-field@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "background",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 640,
+        "height": 360,
+        "fill": "#171e20",
+        "color": "#b5e6c4"
+      },
+      "locked": false
+    },
+    "slow-eyebrow": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "02 / SLOW TENSION",
+        "fontSize": 10,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#b5e6c4",
+        "width": 560,
+        "height": 14.5
+      },
+      "locked": false
+    },
+    "slow-footer": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "MOTIFRAME   /   FORM · TIME · INTENT",
+        "fontSize": 9,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#73928b",
+        "width": 560,
+        "height": 13.049999999999999
+      },
+      "locked": false
+    },
+    "slow-rule": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 544,
+        "height": 1,
+        "color": "#294139"
+      },
+      "locked": false
+    },
+    "line-1": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "아직,",
+        "fontSize": 54,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 78.3,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "아",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:1hg1u6r:0"
+          },
+          {
+            "original": "직",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:ir6o24:0"
+          },
+          {
+            "original": ",",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:be113f:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 168000,
+            "end": 456000
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 24000
+        }
+      },
+      "locked": false
+    },
+    "line-2": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "움직이지 않았다.",
+        "fontSize": 38,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 55.1,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "움",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:j1lqzj:0"
+          },
+          {
+            "original": "직",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:ir6o24:0"
+          },
+          {
+            "original": "이",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:1urn6oz:0"
+          },
+          {
+            "original": "지",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:j169r3:0"
+          },
+          {
+            "original": " ",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "않",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:1lbw9wd:0"
+          },
+          {
+            "original": "았",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:1p7qplz:0"
+          },
+          {
+            "original": "다",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:qqlbsj:0"
+          },
+          {
+            "original": ".",
+            "start": 8,
+            "end": 9,
+            "id": "grapheme:by08hd:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 288000,
+            "end": 576000
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 13200
+        }
+      },
+      "locked": false
+    },
+    "aside": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "해소를 미룬 10초",
+        "fontSize": 12,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#efae79",
+        "width": 560,
+        "height": 17.4
+      },
+      "locked": false
+    },
+    "anchor": {
+      "definitionId": "showcase-disc@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 5,
+        "height": 5,
+        "fill": "#ede9dd"
+      },
+      "locked": false
+    },
+    "orb": {
+      "definitionId": "showcase-disc@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 30,
+        "height": 30,
+        "fill": "#efae79"
+      },
+      "locked": false
+    },
+    "distance": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 1,
+        "height": 1,
+        "color": "#efae79"
+      },
+      "locked": false
+    },
+    "soundtrack": {
+      "definitionId": "audio",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "audio",
+      "start": 0,
+      "duration": 2400000,
+      "props": {},
+      "locked": false
+    }
+  },
+  "tracks": [
+    {
+      "id": "background",
+      "kind": "graphics",
+      "instanceIds": [
+        "field"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "geometry",
+      "kind": "graphics",
+      "instanceIds": [
+        "anchor",
+        "orb",
+        "distance"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "media",
+      "kind": "video",
+      "instanceIds": [],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "type",
+      "kind": "graphics",
+      "instanceIds": [
+        "line-1",
+        "line-2",
+        "aside"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "details",
+      "kind": "graphics",
+      "instanceIds": [
+        "slow-eyebrow",
+        "slow-footer",
+        "slow-rule"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "audio",
+      "kind": "audio",
+      "instanceIds": [
+        "soundtrack"
+      ],
+      "locked": false,
+      "muted": false
+    }
+  ],
+  "channels": {
+    "field:root:x": {
+      "target": {
+        "instanceId": "field",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field:root:y": {
+      "target": {
+        "instanceId": "field",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-eyebrow:root:x": {
+      "target": {
+        "instanceId": "slow-eyebrow",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-eyebrow:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-eyebrow:root:y": {
+      "target": {
+        "instanceId": "slow-eyebrow",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-eyebrow:y:0",
+          "at": 0,
+          "value": 31,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-footer:root:x": {
+      "target": {
+        "instanceId": "slow-footer",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-footer:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-footer:root:y": {
+      "target": {
+        "instanceId": "slow-footer",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-footer:y:0",
+          "at": 0,
+          "value": 329,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-rule:root:x": {
+      "target": {
+        "instanceId": "slow-rule",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-rule:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "slow-rule:root:y": {
+      "target": {
+        "instanceId": "slow-rule",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-rule:y:0",
+          "at": 0,
+          "value": 58,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "line-1:root:x": {
+      "target": {
+        "instanceId": "line-1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "line-1:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "line-1:root:y": {
+      "target": {
+        "instanceId": "line-1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "line-1:y:0",
+          "at": 0,
+          "value": 102,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "line-2:root:x": {
+      "target": {
+        "instanceId": "line-2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "line-2:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "line-2:root:y": {
+      "target": {
+        "instanceId": "line-2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "line-2:y:0",
+          "at": 0,
+          "value": 171,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "aside:root:x": {
+      "target": {
+        "instanceId": "aside",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "aside:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "aside:root:y": {
+      "target": {
+        "instanceId": "aside",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "aside:y:0",
+          "at": 0,
+          "value": 280,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "aside:root:opacity": {
+      "target": {
+        "instanceId": "aside",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "aside:opacity:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "aside:opacity:1",
+          "at": 744000,
+          "value": 0,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0
+          ],
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "aside:opacity:2",
+          "at": 1008000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "anchor:root:x": {
+      "target": {
+        "instanceId": "anchor",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "anchor:x:0",
+          "at": 0,
+          "value": 432,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "anchor:root:y": {
+      "target": {
+        "instanceId": "anchor",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "anchor:y:0",
+          "at": 0,
+          "value": 276,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "orb:root:y": {
+      "target": {
+        "instanceId": "orb",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "orb:y:0",
+          "at": 0,
+          "value": 264,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "orb:root:scaleX": {
+      "target": {
+        "instanceId": "orb",
+        "targetKey": "root",
+        "channel": "scaleX"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "orb:scaleX:0",
+          "at": 0,
+          "value": 0.86,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0.86
+          ]
+        },
+        {
+          "id": "orb:scaleX:1",
+          "at": 1920000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "orb:root:scaleY": {
+      "target": {
+        "instanceId": "orb",
+        "targetKey": "root",
+        "channel": "scaleY"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "orb:scaleY:0",
+          "at": 0,
+          "value": 0.86,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0.86
+          ]
+        },
+        {
+          "id": "orb:scaleY:1",
+          "at": 1920000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "distance:root:x": {
+      "target": {
+        "instanceId": "distance",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "distance:x:0",
+          "at": 0,
+          "value": 438,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "distance:root:y": {
+      "target": {
+        "instanceId": "distance",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "distance:y:0",
+          "at": 0,
+          "value": 278,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "distance:root:scaleX": {
+      "target": {
+        "instanceId": "distance",
+        "targetKey": "root",
+        "channel": "scaleX"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "distance:scaleX:0",
+          "at": 0,
+          "value": 14,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            14
+          ]
+        },
+        {
+          "id": "distance:scaleX:1",
+          "at": 2280000,
+          "value": 6,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            6
+          ]
+        }
+      ]
+    },
+    "distance:root:opacity": {
+      "target": {
+        "instanceId": "distance",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "distance:opacity:0",
+          "at": 0,
+          "value": 0.22,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0.22
+          ]
+        },
+        {
+          "id": "distance:opacity:1",
+          "at": 1920000,
+          "value": 0.65,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0.65
+          ]
+        }
+      ]
+    },
+    "soundtrack:root:x": {
+      "target": {
+        "instanceId": "soundtrack",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "soundtrack:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "soundtrack:root:y": {
+      "target": {
+        "instanceId": "soundtrack",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "soundtrack:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "orb:root:x": {
+      "target": {
+        "instanceId": "orb",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "recipe",
+      "locked": false,
+      "keys": [
+        {
+          "id": "slow-phrase:slow-cue:orb:x",
+          "at": 0,
+          "value": 452,
+          "interpolation": "linear"
+        },
+        {
+          "id": "slow-phrase:slow-suspend:orb:x",
+          "at": 2280000,
+          "value": 444,
+          "interpolation": "linear"
+        }
+      ],
+      "recipeId": "slow-phrase"
+    }
+  },
+  "assets": {
+    "font": {
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "kind": "font",
+      "logicalPath": "assets/NotoSansKR.ttf",
+      "fontMetadata": {
+        "family": "MotiFrame Sans"
+      }
+    },
+    "font-license": {
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "kind": "license",
+      "logicalPath": "assets/OFL.txt"
+    },
+    "sound": {
+      "sha256": "c2646ff8e116ed8b2d2406616ee80c869d2a4315f9b44e651bbe7e8d2a142a6f",
+      "kind": "audio",
+      "logicalPath": "assets/score.wav"
+    }
+  },
+  "mediaClips": {
+    "soundtrack": {
+      "assetId": "sound",
+      "sourceIn": 0,
+      "sourceOut": 2400000,
+      "rate": {
+        "num": 1,
+        "den": 1
+      },
+      "gain": 0.6
+    }
+  },
+  "score": {
+    "phrases": [
+      {
+        "id": "slow-phrase",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "primaryActor": "orb",
+        "eventIds": [
+          "slow-cue",
+          "slow-suspend"
+        ],
+        "grammar": "phrase-exchange",
+        "bases": {
+          "orb:x": 500
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": "slow-cue",
+        "phraseId": "slow-phrase",
+        "kind": "onset",
+        "tick": 0,
+        "targetIds": [
+          "orb"
+        ]
+      },
+      {
+        "id": "slow-suspend",
+        "phraseId": "slow-phrase",
+        "kind": "prepare",
+        "tick": 2280000,
+        "targetIds": [
+          "orb"
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "id": "field:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "field"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "slow-eyebrow:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "slow-eyebrow"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "slow-footer:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "slow-footer"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "slow-rule:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "slow-rule"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "line-1:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "line-1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "line-2:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "line-2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "aside:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "aside"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "anchor:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "anchor"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "orb:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "orb"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "distance:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "distance"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "slow-title-read",
+        "range": {
+          "start": 720000,
+          "end": 2400000
+        },
+        "targetIds": [
+          "line-1",
+          "line-2"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "slow-tension",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "orb",
+          "anchor",
+          "distance"
+        ],
+        "role": "tension"
+      },
+      {
+        "id": "soundtrack:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "soundtrack"
+        ],
+        "role": "texture"
+      }
+    ],
+    "tensions": [
+      {
+        "id": "intentional-suspension",
+        "cueEvent": "slow-cue",
+        "unresolvedState": "The warm disc approaches the anchor; the remaining gap stays open.",
+        "intentionalUnresolvedEnd": true
+      }
+    ],
+    "handoffs": []
+  },
+  "references": [],
+  "provenance": {
+    "runtime": "0.1.0",
+    "sdk": "0.1.0",
+    "sources": [
+      "scripts/create-showcase.ts",
+      "original-synthetic-audio-and-video",
+      "Noto Sans KR / SIL OFL 1.1"
+    ]
+  }
+}

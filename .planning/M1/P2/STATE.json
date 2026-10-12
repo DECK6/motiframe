@@ -2,8 +2,8 @@
   "schema_version": 1,
   "milestone": "M1",
   "phase": "P2",
-  "gate": "implementation-plan-verified",
-  "status": "pending",
+  "gate": "local-motion-primitives-verified",
+  "status": "complete",
   "owner_runtime": "codex",
   "plan_path": "docs/plan/implementation/P2-motion.md",
   "contracts_path": "docs/plan/implementation/contracts.md",
@@ -19,7 +19,7 @@
       "depends_on": [
         "T11"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T13",
@@ -27,7 +27,7 @@
       "depends_on": [
         "T12"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T14",
@@ -35,7 +35,7 @@
       "depends_on": [
         "T13"
       ],
-      "status": "pending"
+      "status": "complete"
     },
     {
       "id": "T15",
@@ -43,13 +43,29 @@
       "depends_on": [
         "T14"
       ],
-      "status": "pending"
+      "status": "complete"
     }
   ],
-  "evidence": [],
-  "updated_at": "2026-10-12T05:12:00.899187+00:00",
+  "evidence": [
+    {
+      "command": "bun run check; bun run build; bun run test",
+      "exit_code": 0,
+      "result": "TypeScript/Biome pass; production build pass; 53 suites / 188 tests pass (2026-10-12 15:50–15:51 KST).",
+      "platform": "darwin-arm64",
+      "scope": "Local implementation verification; other native platforms and human perception remain unverified."
+    }
+  ],
+  "updated_at": "2026-10-12T06:53:08.995574+00:00",
   "product_name": "MotiFrame",
   "product_name_ko": "모티프레임",
   "project_slug": "motiframe",
-  "planned_code_root": "/Volumes/data/Dev/motiframe"
+  "planned_code_root": "/Volumes/data/Dev/motiframe",
+  "remaining_limits": [
+    "Recipes are scaffolds, not expressive choreography certification.",
+    "Perception and audio listening are unverified; see docs/motion-rhythm-audit.md."
+  ],
+  "implementation_notes": [
+    "English, external-agent-first UI; DEXA Paper/orange shell and Ink/cyan preview, bundled local fonts.",
+    "Shared document, frame clock, React/HTML stage; Three.js and Tone.js default SDK tools."
+  ]
 }

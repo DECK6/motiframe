@@ -1,0 +1,17 @@
+{
+  "durationTicks": 1440000,
+  "startTick": 0,
+  "sampleRate": 48000,
+  "instrument": "triangle",
+  "gainDb": -16,
+  "attackTicks": 1200,
+  "releaseTicks": 24000,
+  "notes": [
+    { "at": 115200, "duration": 19200, "pitch": "C3", "velocity": 0.9 },
+    { "at": 196800, "duration": 14400, "pitch": "G3", "velocity": 0.35 },
+    { "at": 412800, "duration": 14400, "pitch": "C4", "velocity": 0.4 },
+    { "at": 484800, "duration": 14400, "pitch": "D4", "velocity": 0.5 },
+    { "at": 624000, "duration": 36000, "pitch": "G3", "velocity": 1 },
+    { "at": 1032000, "duration": 96000, "pitch": "C4", "velocity": 0.55 }
+  ]
+}

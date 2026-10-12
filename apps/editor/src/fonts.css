@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./fonts/space-grotesk-vf.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./fonts/jetbrains-mono-vf.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}

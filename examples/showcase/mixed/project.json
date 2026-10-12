@@ -1,0 +1,3624 @@
+{
+  "schemaVersion": 1,
+  "id": "mixed-material-30s",
+  "revision": 0,
+  "settings": {
+    "width": 640,
+    "height": 360,
+    "fps": {
+      "num": 30,
+      "den": 1
+    },
+    "duration": 7200000,
+    "ticksPerSecond": 240000,
+    "seed": 917,
+    "colorSpace": "srgb",
+    "sampleRate": 48000
+  },
+  "definitions": {
+    "title": {
+      "id": "title",
+      "revision": 1,
+      "kind": "react",
+      "moduleHash": "builtin:react-text",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "fontSize": {
+            "type": "number"
+          },
+          "fontWeight": {
+            "type": "number"
+          },
+          "fontFamily": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "shape": {
+      "id": "shape",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:html-rect",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "video": {
+      "id": "video",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:media",
+      "propsSchema": {
+        "type": "object",
+        "properties": {
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          },
+          "assetId": {
+            "type": "string"
+          }
+        }
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "audio": {
+      "id": "audio",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:audio",
+      "propsSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-disc@1": {
+      "id": "showcase-disc",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "e47e0698a7930b9992fd307447c4d9ffd64ac0ab0134077fc3e933b96015a7e3",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-ring@1": {
+      "id": "showcase-ring",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "2a081f5f7d24570d786cc447361bb0cf17fa9e2fe1eae25cad470d430dc376d9",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "showcase-field@1": {
+      "id": "showcase-field",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "af6de0da4352fc1d2e9cce1b232850e2e82246b543f94d5c4688f07bc9db7143",
+      "propsSchema": {
+        "type": "object"
+      },
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    }
+  },
+  "scenes": {
+    "signal": {
+      "start": 0,
+      "duration": 2400000,
+      "rootIds": [
+        "field-1",
+        "s1-eyebrow",
+        "s1-footer",
+        "s1-rule",
+        "scene1-line1",
+        "scene1-line2",
+        "signal-orb",
+        "soundtrack"
+      ]
+    },
+    "material": {
+      "start": 2400000,
+      "duration": 2400000,
+      "rootIds": [
+        "field-2",
+        "s2-eyebrow",
+        "s2-footer",
+        "s2-rule",
+        "scene2-line1",
+        "scene2-line2",
+        "material-orb",
+        "material-video"
+      ]
+    },
+    "continuation": {
+      "start": 4800000,
+      "duration": 2400000,
+      "rootIds": [
+        "field-3",
+        "s3-eyebrow",
+        "s3-footer",
+        "s3-rule",
+        "scene3-line1",
+        "scene3-line2",
+        "reply-0",
+        "reply-1",
+        "reply-2",
+        "ending"
+      ]
+    }
+  },
+  "instances": {
+    "field-1": {
+      "definitionId": "showcase-field@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "background",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 640,
+        "height": 360,
+        "fill": "#111d21",
+        "color": "#b5e6c4"
+      },
+      "locked": false
+    },
+    "field-2": {
+      "definitionId": "showcase-field@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "background",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 640,
+        "height": 360,
+        "fill": "#172827",
+        "color": "#b5e6c4"
+      },
+      "locked": false
+    },
+    "field-3": {
+      "definitionId": "showcase-field@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "background",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 640,
+        "height": 360,
+        "fill": "#ede9dd",
+        "color": "#b5e6c4"
+      },
+      "locked": false
+    },
+    "s1-eyebrow": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "03 / SIGNAL TO SCENE",
+        "fontSize": 10,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#b5e6c4",
+        "width": 560,
+        "height": 14.5
+      },
+      "locked": false
+    },
+    "s1-footer": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "MOTIFRAME   /   FORM · TIME · INTENT",
+        "fontSize": 9,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#73928b",
+        "width": 560,
+        "height": 13.049999999999999
+      },
+      "locked": false
+    },
+    "s1-rule": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 544,
+        "height": 1,
+        "color": "#294139"
+      },
+      "locked": false
+    },
+    "s2-eyebrow": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "03 / DIFFERENT MATERIALS",
+        "fontSize": 10,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#b5e6c4",
+        "width": 560,
+        "height": 14.5
+      },
+      "locked": false
+    },
+    "s2-footer": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "MOTIFRAME   /   FORM · TIME · INTENT",
+        "fontSize": 9,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#73928b",
+        "width": 560,
+        "height": 13.049999999999999
+      },
+      "locked": false
+    },
+    "s2-rule": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 544,
+        "height": 1,
+        "color": "#294139"
+      },
+      "locked": false
+    },
+    "s3-eyebrow": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "03 / CONTINUATION",
+        "fontSize": 10,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#10241f",
+        "width": 560,
+        "height": 14.5
+      },
+      "locked": false
+    },
+    "s3-footer": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "MOTIFRAME   /   FORM · TIME · INTENT",
+        "fontSize": 9,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#73847a",
+        "width": 560,
+        "height": 13.049999999999999
+      },
+      "locked": false
+    },
+    "s3-rule": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 544,
+        "height": 1,
+        "color": "#c7d0bf"
+      },
+      "locked": false
+    },
+    "scene1-line1": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "작은 신호가",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "작",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:14yo56k:0"
+          },
+          {
+            "original": "은",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:1ik4o67:0"
+          },
+          {
+            "original": " ",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "신",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:rxhvlr:0"
+          },
+          {
+            "original": "호",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:gsrrd3:0"
+          },
+          {
+            "original": "가",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:17sisf:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 48000,
+            "end": 228000
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "scene1-line2": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "장면을 바꾼다.",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "장",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:18ajdi8:0"
+          },
+          {
+            "original": "면",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:1uoieub:0"
+          },
+          {
+            "original": "을",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:1hg69eb:0"
+          },
+          {
+            "original": " ",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "바",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:4iodfn:0"
+          },
+          {
+            "original": "꾼",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:1f5sznf:0"
+          },
+          {
+            "original": "다",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:qqlbsj:0"
+          },
+          {
+            "original": ".",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:by08hd:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 86400,
+            "end": 266400
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "scene2-line1": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "하나의 시간 위에",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "하",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:1p6rbxj:0"
+          },
+          {
+            "original": "나",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:17dt27b:0"
+          },
+          {
+            "original": "의",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:1p7v4tj:0"
+          },
+          {
+            "original": " ",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "시",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:olmna3:0"
+          },
+          {
+            "original": "간",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:3u40j:0"
+          },
+          {
+            "original": " ",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:aa2mbj:1"
+          },
+          {
+            "original": "위",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:6crtf:0"
+          },
+          {
+            "original": "에",
+            "start": 8,
+            "end": 9,
+            "id": "grapheme:nh8r9r:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 528000,
+            "end": 708000
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "scene2-line2": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "다른 재료를 엮다.",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#ede9dd",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "다",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:qqlbsj:0"
+          },
+          {
+            "original": "른",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:1y070cn:0"
+          },
+          {
+            "original": " ",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "재",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:1asfsqz:0"
+          },
+          {
+            "original": "료",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:k28r3f:0"
+          },
+          {
+            "original": "를",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:1ww8lkr:0"
+          },
+          {
+            "original": " ",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:aa2mbj:1"
+          },
+          {
+            "original": "엮",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:tl00j5:0"
+          },
+          {
+            "original": "다",
+            "start": 8,
+            "end": 9,
+            "id": "grapheme:qqlbsj:1"
+          },
+          {
+            "original": ".",
+            "start": 9,
+            "end": 10,
+            "id": "grapheme:by08hd:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 566400,
+            "end": 746400
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "scene3-line1": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "장면은 닫혀도,",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#10241f",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "장",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:18ajdi8:0"
+          },
+          {
+            "original": "면",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:1uoieub:0"
+          },
+          {
+            "original": "은",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:1ik4o67:0"
+          },
+          {
+            "original": " ",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "닫",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:ucg5t6:0"
+          },
+          {
+            "original": "혀",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:19e0in:0"
+          },
+          {
+            "original": "도",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:huvtzn:0"
+          },
+          {
+            "original": ",",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:be113f:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 48000,
+            "end": 228000
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "scene3-line2": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "리듬은 이어진다.",
+        "fontSize": 39,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 700,
+        "color": "#10241f",
+        "width": 560,
+        "height": 56.55,
+        "textUnit": "grapheme",
+        "textUnits": [
+          {
+            "original": "리",
+            "start": 0,
+            "end": 1,
+            "id": "grapheme:1ap4e2z:0"
+          },
+          {
+            "original": "듬",
+            "start": 1,
+            "end": 2,
+            "id": "grapheme:sy4vpn:0"
+          },
+          {
+            "original": "은",
+            "start": 2,
+            "end": 3,
+            "id": "grapheme:1ik4o67:0"
+          },
+          {
+            "original": " ",
+            "start": 3,
+            "end": 4,
+            "id": "grapheme:aa2mbj:0"
+          },
+          {
+            "original": "이",
+            "start": 4,
+            "end": 5,
+            "id": "grapheme:1urn6oz:0"
+          },
+          {
+            "original": "어",
+            "start": 5,
+            "end": 6,
+            "id": "grapheme:1d08737:0"
+          },
+          {
+            "original": "진",
+            "start": 6,
+            "end": 7,
+            "id": "grapheme:hx7uz7:0"
+          },
+          {
+            "original": "다",
+            "start": 7,
+            "end": 8,
+            "id": "grapheme:qqlbsj:0"
+          },
+          {
+            "original": ".",
+            "start": 8,
+            "end": 9,
+            "id": "grapheme:by08hd:0"
+          }
+        ],
+        "textSelector": {
+          "range": {
+            "start": 86400,
+            "end": 266400
+          },
+          "offset": 0,
+          "shape": "smooth",
+          "stagger": 9600
+        }
+      },
+      "locked": false
+    },
+    "signal-orb": {
+      "definitionId": "showcase-disc@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 32,
+        "height": 32,
+        "fill": "#efae79"
+      },
+      "locked": false
+    },
+    "material-orb": {
+      "definitionId": "showcase-disc@1",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "details",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 32,
+        "height": 32,
+        "fill": "#efae79"
+      },
+      "locked": false
+    },
+    "material-video": {
+      "definitionId": "video",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "media",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "assetId": "material",
+        "width": 640,
+        "height": 360
+      },
+      "locked": false
+    },
+    "reply-0": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 12,
+        "height": 12,
+        "color": "#10241f"
+      },
+      "locked": false
+    },
+    "reply-1": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 12,
+        "height": 12,
+        "color": "#98a99c"
+      },
+      "locked": false
+    },
+    "reply-2": {
+      "definitionId": "shape",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "geometry",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "width": 12,
+        "height": 12,
+        "color": "#98a99c"
+      },
+      "locked": false
+    },
+    "ending": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "type",
+      "start": 0,
+      "duration": 2400000,
+      "props": {
+        "text": "다음 장면을 위한 여백",
+        "fontSize": 12,
+        "fontFamily": "MotiFrame Sans",
+        "fontWeight": 500,
+        "color": "#6b7e70",
+        "width": 560,
+        "height": 17.4
+      },
+      "locked": false
+    },
+    "soundtrack": {
+      "definitionId": "audio",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "audio",
+      "start": 0,
+      "duration": 7200000,
+      "props": {},
+      "locked": false
+    }
+  },
+  "tracks": [
+    {
+      "id": "background",
+      "kind": "graphics",
+      "instanceIds": [
+        "field-1",
+        "field-2",
+        "field-3"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "geometry",
+      "kind": "graphics",
+      "instanceIds": [
+        "signal-orb",
+        "reply-0",
+        "reply-1",
+        "reply-2"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "media",
+      "kind": "video",
+      "instanceIds": [
+        "material-video"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "type",
+      "kind": "graphics",
+      "instanceIds": [
+        "scene1-line1",
+        "scene1-line2",
+        "scene2-line1",
+        "scene2-line2",
+        "scene3-line1",
+        "scene3-line2",
+        "ending"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "details",
+      "kind": "graphics",
+      "instanceIds": [
+        "s1-eyebrow",
+        "s1-footer",
+        "s1-rule",
+        "s2-eyebrow",
+        "s2-footer",
+        "s2-rule",
+        "s3-eyebrow",
+        "s3-footer",
+        "s3-rule",
+        "material-orb"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "audio",
+      "kind": "audio",
+      "instanceIds": [
+        "soundtrack"
+      ],
+      "locked": false,
+      "muted": false
+    }
+  ],
+  "channels": {
+    "field-1:root:x": {
+      "target": {
+        "instanceId": "field-1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-1:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field-1:root:y": {
+      "target": {
+        "instanceId": "field-1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-1:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field-2:root:x": {
+      "target": {
+        "instanceId": "field-2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-2:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field-2:root:y": {
+      "target": {
+        "instanceId": "field-2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-2:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field-3:root:x": {
+      "target": {
+        "instanceId": "field-3",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-3:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "field-3:root:y": {
+      "target": {
+        "instanceId": "field-3",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "field-3:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-eyebrow:root:x": {
+      "target": {
+        "instanceId": "s1-eyebrow",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-eyebrow:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-eyebrow:root:y": {
+      "target": {
+        "instanceId": "s1-eyebrow",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-eyebrow:y:0",
+          "at": 0,
+          "value": 31,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-footer:root:x": {
+      "target": {
+        "instanceId": "s1-footer",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-footer:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-footer:root:y": {
+      "target": {
+        "instanceId": "s1-footer",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-footer:y:0",
+          "at": 0,
+          "value": 329,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-rule:root:x": {
+      "target": {
+        "instanceId": "s1-rule",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-rule:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s1-rule:root:y": {
+      "target": {
+        "instanceId": "s1-rule",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s1-rule:y:0",
+          "at": 0,
+          "value": 58,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-eyebrow:root:x": {
+      "target": {
+        "instanceId": "s2-eyebrow",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-eyebrow:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-eyebrow:root:y": {
+      "target": {
+        "instanceId": "s2-eyebrow",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-eyebrow:y:0",
+          "at": 0,
+          "value": 31,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-footer:root:x": {
+      "target": {
+        "instanceId": "s2-footer",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-footer:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-footer:root:y": {
+      "target": {
+        "instanceId": "s2-footer",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-footer:y:0",
+          "at": 0,
+          "value": 329,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-rule:root:x": {
+      "target": {
+        "instanceId": "s2-rule",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-rule:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s2-rule:root:y": {
+      "target": {
+        "instanceId": "s2-rule",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s2-rule:y:0",
+          "at": 0,
+          "value": 58,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-eyebrow:root:x": {
+      "target": {
+        "instanceId": "s3-eyebrow",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-eyebrow:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-eyebrow:root:y": {
+      "target": {
+        "instanceId": "s3-eyebrow",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-eyebrow:y:0",
+          "at": 0,
+          "value": 31,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-footer:root:x": {
+      "target": {
+        "instanceId": "s3-footer",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-footer:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-footer:root:y": {
+      "target": {
+        "instanceId": "s3-footer",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-footer:y:0",
+          "at": 0,
+          "value": 329,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-rule:root:x": {
+      "target": {
+        "instanceId": "s3-rule",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-rule:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "s3-rule:root:y": {
+      "target": {
+        "instanceId": "s3-rule",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "s3-rule:y:0",
+          "at": 0,
+          "value": 58,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line1:root:y": {
+      "target": {
+        "instanceId": "scene1-line1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-line1:y:0",
+          "at": 0,
+          "value": 103,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line1:root:opacity": {
+      "target": {
+        "instanceId": "scene1-line1",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-line1:opacity:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line1:opacity:1",
+          "at": 36000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line1:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line1:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line2:root:x": {
+      "target": {
+        "instanceId": "scene1-line2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-line2:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line2:root:y": {
+      "target": {
+        "instanceId": "scene1-line2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-line2:y:0",
+          "at": 0,
+          "value": 160,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line2:root:opacity": {
+      "target": {
+        "instanceId": "scene1-line2",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-line2:opacity:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line2:opacity:1",
+          "at": 36000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line2:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene1-line2:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene2-line1:root:y": {
+      "target": {
+        "instanceId": "scene2-line1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-line1:y:0",
+          "at": 0,
+          "value": 103,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene2-line1:root:opacity": {
+      "target": {
+        "instanceId": "scene2-line1",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-line1:opacity:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "scene2-line1:opacity:1",
+          "at": 516000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene2-line1:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene2-line1:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene2-line2:root:x": {
+      "target": {
+        "instanceId": "scene2-line2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-line2:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene2-line2:root:y": {
+      "target": {
+        "instanceId": "scene2-line2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-line2:y:0",
+          "at": 0,
+          "value": 160,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene2-line2:root:opacity": {
+      "target": {
+        "instanceId": "scene2-line2",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-line2:opacity:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "scene2-line2:opacity:1",
+          "at": 516000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene2-line2:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene2-line2:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene3-line1:root:y": {
+      "target": {
+        "instanceId": "scene3-line1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-line1:y:0",
+          "at": 0,
+          "value": 103,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene3-line1:root:opacity": {
+      "target": {
+        "instanceId": "scene3-line1",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-line1:opacity:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line1:opacity:1",
+          "at": 36000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line1:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line1:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene3-line2:root:x": {
+      "target": {
+        "instanceId": "scene3-line2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-line2:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene3-line2:root:y": {
+      "target": {
+        "instanceId": "scene3-line2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-line2:y:0",
+          "at": 0,
+          "value": 160,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene3-line2:root:opacity": {
+      "target": {
+        "instanceId": "scene3-line2",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-line2:opacity:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line2:opacity:1",
+          "at": 36000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line2:opacity:2",
+          "at": 2232000,
+          "value": 1,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "id": "scene3-line2:opacity:3",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "signal-orb:root:x": {
+      "target": {
+        "instanceId": "signal-orb",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "signal-orb:x:0",
+          "at": 0,
+          "value": 452,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            452
+          ]
+        },
+        {
+          "id": "signal-orb:x:1",
+          "at": 288000,
+          "value": 492,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            492
+          ],
+          "out": [
+            0.25,
+            492
+          ]
+        },
+        {
+          "id": "signal-orb:x:2",
+          "at": 2064000,
+          "value": 492,
+          "interpolation": "hold",
+          "in": [
+            0.75,
+            492
+          ]
+        },
+        {
+          "id": "signal-orb:x:3",
+          "at": 2400000,
+          "value": 512,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "signal-orb:root:y": {
+      "target": {
+        "instanceId": "signal-orb",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "signal-orb:y:0",
+          "at": 0,
+          "value": 257,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "signal-orb:root:scaleX": {
+      "target": {
+        "instanceId": "signal-orb",
+        "targetKey": "root",
+        "channel": "scaleX"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "signal-orb:scaleX:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "signal-orb:scaleX:1",
+          "at": 144000,
+          "value": 1.15,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1.15
+          ],
+          "out": [
+            0.25,
+            1.15
+          ]
+        },
+        {
+          "id": "signal-orb:scaleX:2",
+          "at": 240000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "signal-orb:scaleX:3",
+          "at": 2064000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "signal-orb:scaleX:4",
+          "at": 2400000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "signal-orb:root:scaleY": {
+      "target": {
+        "instanceId": "signal-orb",
+        "targetKey": "root",
+        "channel": "scaleY"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "signal-orb:scaleY:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "signal-orb:scaleY:1",
+          "at": 144000,
+          "value": 1.15,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1.15
+          ],
+          "out": [
+            0.25,
+            1.15
+          ]
+        },
+        {
+          "id": "signal-orb:scaleY:2",
+          "at": 240000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "signal-orb:scaleY:3",
+          "at": 2064000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "signal-orb:scaleY:4",
+          "at": 2400000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "material-orb:root:x": {
+      "target": {
+        "instanceId": "material-orb",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "recipe",
+      "recipeId": "material-handoff",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-orb:x:0",
+          "at": 0,
+          "value": 512,
+          "interpolation": "hold"
+        },
+        {
+          "id": "material-orb:x:1",
+          "at": 288000,
+          "value": 600,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            600
+          ]
+        }
+      ]
+    },
+    "material-orb:root:y": {
+      "target": {
+        "instanceId": "material-orb",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "recipe",
+      "recipeId": "material-handoff",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-orb:y:0",
+          "at": 0,
+          "value": 257,
+          "interpolation": "hold"
+        }
+      ]
+    },
+    "material-orb:root:opacity": {
+      "target": {
+        "instanceId": "material-orb",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-orb:opacity:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "material-orb:opacity:1",
+          "at": 144000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ],
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "material-orb:opacity:2",
+          "at": 336000,
+          "value": 0,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0
+          ]
+        }
+      ]
+    },
+    "material-orb:root:scaleX": {
+      "target": {
+        "instanceId": "material-orb",
+        "targetKey": "root",
+        "channel": "scaleX"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-orb:scaleX:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "material-orb:scaleX:1",
+          "at": 288000,
+          "value": 7,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            7
+          ]
+        }
+      ]
+    },
+    "material-orb:root:scaleY": {
+      "target": {
+        "instanceId": "material-orb",
+        "targetKey": "root",
+        "channel": "scaleY"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-orb:scaleY:0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            1
+          ]
+        },
+        {
+          "id": "material-orb:scaleY:1",
+          "at": 288000,
+          "value": 7,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            7
+          ]
+        }
+      ]
+    },
+    "material-video:root:x": {
+      "target": {
+        "instanceId": "material-video",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-video:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "material-video:root:y": {
+      "target": {
+        "instanceId": "material-video",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-video:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "material-video:root:clipProgress": {
+      "target": {
+        "instanceId": "material-video",
+        "targetKey": "root",
+        "channel": "clipProgress"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-video:clipProgress:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "material-video:clipProgress:1",
+          "at": 84000,
+          "value": 0,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0
+          ],
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "material-video:clipProgress:2",
+          "at": 384000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "material-video:root:opacity": {
+      "target": {
+        "instanceId": "material-video",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "material-video:opacity:0",
+          "at": 0,
+          "value": 0.8,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0.8
+          ]
+        },
+        {
+          "id": "material-video:opacity:1",
+          "at": 2208000,
+          "value": 0.8,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0.8
+          ],
+          "out": [
+            0.25,
+            0.8
+          ]
+        },
+        {
+          "id": "material-video:opacity:2",
+          "at": 2400000,
+          "value": 0,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0
+          ]
+        }
+      ]
+    },
+    "reply-0:root:x": {
+      "target": {
+        "instanceId": "reply-0",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-0:x:0",
+          "at": 0,
+          "value": -32,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            -32
+          ]
+        },
+        {
+          "id": "reply-0:x:1",
+          "at": 96000,
+          "value": 56,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            56
+          ],
+          "out": [
+            0.25,
+            56
+          ]
+        },
+        {
+          "id": "reply-0:x:2",
+          "at": 216000,
+          "value": 48,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            48
+          ],
+          "out": [
+            0.25,
+            48
+          ]
+        },
+        {
+          "id": "reply-0:x:3",
+          "at": 2400000,
+          "value": 48,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            48
+          ]
+        }
+      ]
+    },
+    "reply-0:root:y": {
+      "target": {
+        "instanceId": "reply-0",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-0:y:0",
+          "at": 0,
+          "value": 265,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "reply-1:root:x": {
+      "target": {
+        "instanceId": "reply-1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-1:x:0",
+          "at": 0,
+          "value": -47,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            -47
+          ]
+        },
+        {
+          "id": "reply-1:x:1",
+          "at": 148800,
+          "value": 86,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            86
+          ],
+          "out": [
+            0.25,
+            86
+          ]
+        },
+        {
+          "id": "reply-1:x:2",
+          "at": 268800,
+          "value": 78,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            78
+          ],
+          "out": [
+            0.25,
+            78
+          ]
+        },
+        {
+          "id": "reply-1:x:3",
+          "at": 2400000,
+          "value": 78,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            78
+          ]
+        }
+      ]
+    },
+    "reply-1:root:y": {
+      "target": {
+        "instanceId": "reply-1",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-1:y:0",
+          "at": 0,
+          "value": 265,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "reply-2:root:x": {
+      "target": {
+        "instanceId": "reply-2",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-2:x:0",
+          "at": 0,
+          "value": -62,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            -62
+          ]
+        },
+        {
+          "id": "reply-2:x:1",
+          "at": 201600,
+          "value": 116,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            116
+          ],
+          "out": [
+            0.25,
+            116
+          ]
+        },
+        {
+          "id": "reply-2:x:2",
+          "at": 321600,
+          "value": 108,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            108
+          ],
+          "out": [
+            0.25,
+            108
+          ]
+        },
+        {
+          "id": "reply-2:x:3",
+          "at": 2400000,
+          "value": 108,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            108
+          ]
+        }
+      ]
+    },
+    "reply-2:root:y": {
+      "target": {
+        "instanceId": "reply-2",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "reply-2:y:0",
+          "at": 0,
+          "value": 265,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "ending:root:x": {
+      "target": {
+        "instanceId": "ending",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "ending:x:0",
+          "at": 0,
+          "value": 48,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "ending:root:y": {
+      "target": {
+        "instanceId": "ending",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "ending:y:0",
+          "at": 0,
+          "value": 292,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "ending:root:opacity": {
+      "target": {
+        "instanceId": "ending",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "ending:opacity:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic",
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "ending:opacity:1",
+          "at": 600000,
+          "value": 0,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            0
+          ],
+          "out": [
+            0.25,
+            0
+          ]
+        },
+        {
+          "id": "ending:opacity:2",
+          "at": 864000,
+          "value": 1,
+          "interpolation": "cubic",
+          "in": [
+            0.75,
+            1
+          ]
+        }
+      ]
+    },
+    "soundtrack:root:x": {
+      "target": {
+        "instanceId": "soundtrack",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "soundtrack:x:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "soundtrack:root:y": {
+      "target": {
+        "instanceId": "soundtrack",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "soundtrack:y:0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "cubic"
+        }
+      ]
+    },
+    "scene1-line1:root:x": {
+      "target": {
+        "instanceId": "scene1-line1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "recipe",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene1-phrase:scene1-phrase:on:scene1-line1:x",
+          "at": 0,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene1-phrase:scene1-phrase:arrive:scene1-line1:x",
+          "at": 264000,
+          "value": 48,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene1-phrase:scene1-phrase:rest:scene1-line1:x",
+          "at": 360000,
+          "value": 48,
+          "interpolation": "hold"
+        },
+        {
+          "id": "scene1-phrase:scene1-phrase:reply:scene1-line1:x",
+          "at": 2328000,
+          "value": 64,
+          "interpolation": "linear"
+        }
+      ],
+      "recipeId": "scene1-phrase"
+    },
+    "scene2-line1:root:x": {
+      "target": {
+        "instanceId": "scene2-line1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "recipe",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene2-phrase:scene2-phrase:on:scene2-line1:x",
+          "at": 0,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene2-phrase:scene2-phrase:arrive:scene2-line1:x",
+          "at": 744000,
+          "value": 48,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene2-phrase:scene2-phrase:rest:scene2-line1:x",
+          "at": 840000,
+          "value": 48,
+          "interpolation": "hold"
+        },
+        {
+          "id": "scene2-phrase:scene2-phrase:reply:scene2-line1:x",
+          "at": 2328000,
+          "value": 64,
+          "interpolation": "linear"
+        }
+      ],
+      "recipeId": "scene2-phrase"
+    },
+    "scene3-line1:root:x": {
+      "target": {
+        "instanceId": "scene3-line1",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "recipe",
+      "locked": false,
+      "keys": [
+        {
+          "id": "scene3-phrase:scene3-phrase:on:scene3-line1:x",
+          "at": 0,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene3-phrase:scene3-phrase:arrive:scene3-line1:x",
+          "at": 264000,
+          "value": 48,
+          "interpolation": "linear"
+        },
+        {
+          "id": "scene3-phrase:scene3-phrase:rest:scene3-line1:x",
+          "at": 360000,
+          "value": 48,
+          "interpolation": "hold"
+        },
+        {
+          "id": "scene3-phrase:scene3-phrase:reply:scene3-line1:x",
+          "at": 2328000,
+          "value": 64,
+          "interpolation": "linear"
+        }
+      ],
+      "recipeId": "scene3-phrase"
+    }
+  },
+  "assets": {
+    "material": {
+      "kind": "video",
+      "logicalPath": "assets/material.mp4",
+      "sha256": "d5df4e6bfeb21ca2fd94941ee8c36942420fe27d63cf125d38aa46c310682a67"
+    },
+    "font": {
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "kind": "font",
+      "logicalPath": "assets/NotoSansKR.ttf",
+      "fontMetadata": {
+        "family": "MotiFrame Sans"
+      }
+    },
+    "font-license": {
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "kind": "license",
+      "logicalPath": "assets/OFL.txt"
+    },
+    "sound": {
+      "sha256": "fa24294d0a7ca4b3b62859f7984c0eaffee6d121cff58092cc5ef63940694a35",
+      "kind": "audio",
+      "logicalPath": "assets/score.wav"
+    }
+  },
+  "mediaClips": {
+    "material-video": {
+      "assetId": "material",
+      "sourceIn": 0,
+      "sourceOut": 2400000,
+      "rate": {
+        "num": 1,
+        "den": 1
+      },
+      "gain": 0
+    },
+    "soundtrack": {
+      "assetId": "sound",
+      "sourceIn": 0,
+      "sourceOut": 7200000,
+      "rate": {
+        "num": 1,
+        "den": 1
+      },
+      "gain": 0.6
+    }
+  },
+  "score": {
+    "phrases": [
+      {
+        "id": "scene1-phrase",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "primaryActor": "scene1-line1",
+        "eventIds": [
+          "scene1-phrase:on",
+          "scene1-phrase:arrive",
+          "scene1-phrase:rest",
+          "scene1-phrase:reply"
+        ],
+        "grammar": "phrase-exchange",
+        "bases": {
+          "scene1-line1:x": 48
+        }
+      },
+      {
+        "id": "scene2-phrase",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "primaryActor": "scene2-line1",
+        "eventIds": [
+          "scene2-phrase:on",
+          "scene2-phrase:arrive",
+          "scene2-phrase:rest",
+          "scene2-phrase:reply"
+        ],
+        "grammar": "phrase-exchange",
+        "bases": {
+          "scene2-line1:x": 48
+        }
+      },
+      {
+        "id": "scene3-phrase",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "primaryActor": "scene3-line1",
+        "eventIds": [
+          "scene3-phrase:on",
+          "scene3-phrase:arrive",
+          "scene3-phrase:rest",
+          "scene3-phrase:reply"
+        ],
+        "grammar": "phrase-exchange",
+        "bases": {
+          "scene3-line1:x": 48
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": "scene1-phrase:on",
+        "phraseId": "scene1-phrase",
+        "kind": "onset",
+        "tick": 0,
+        "targetIds": [
+          "scene1-line1"
+        ]
+      },
+      {
+        "id": "scene1-phrase:arrive",
+        "phraseId": "scene1-phrase",
+        "kind": "accent",
+        "tick": 264000,
+        "targetIds": [
+          "scene1-line1"
+        ]
+      },
+      {
+        "id": "scene1-phrase:rest",
+        "phraseId": "scene1-phrase",
+        "kind": "rest",
+        "tick": 360000,
+        "targetIds": [
+          "scene1-line1"
+        ]
+      },
+      {
+        "id": "scene1-phrase:reply",
+        "phraseId": "scene1-phrase",
+        "kind": "response",
+        "tick": 2328000,
+        "targetIds": [
+          "scene1-line1"
+        ]
+      },
+      {
+        "id": "scene2-phrase:on",
+        "phraseId": "scene2-phrase",
+        "kind": "onset",
+        "tick": 2400000,
+        "targetIds": [
+          "scene2-line1"
+        ]
+      },
+      {
+        "id": "scene2-phrase:arrive",
+        "phraseId": "scene2-phrase",
+        "kind": "accent",
+        "tick": 3144000,
+        "targetIds": [
+          "scene2-line1"
+        ]
+      },
+      {
+        "id": "scene2-phrase:rest",
+        "phraseId": "scene2-phrase",
+        "kind": "rest",
+        "tick": 3240000,
+        "targetIds": [
+          "scene2-line1"
+        ]
+      },
+      {
+        "id": "scene2-phrase:reply",
+        "phraseId": "scene2-phrase",
+        "kind": "response",
+        "tick": 4728000,
+        "targetIds": [
+          "scene2-line1"
+        ]
+      },
+      {
+        "id": "scene3-phrase:on",
+        "phraseId": "scene3-phrase",
+        "kind": "onset",
+        "tick": 4800000,
+        "targetIds": [
+          "scene3-line1"
+        ]
+      },
+      {
+        "id": "scene3-phrase:arrive",
+        "phraseId": "scene3-phrase",
+        "kind": "accent",
+        "tick": 5064000,
+        "targetIds": [
+          "scene3-line1"
+        ]
+      },
+      {
+        "id": "scene3-phrase:rest",
+        "phraseId": "scene3-phrase",
+        "kind": "rest",
+        "tick": 5160000,
+        "targetIds": [
+          "scene3-line1"
+        ]
+      },
+      {
+        "id": "scene3-phrase:reply",
+        "phraseId": "scene3-phrase",
+        "kind": "response",
+        "tick": 7128000,
+        "targetIds": [
+          "scene3-line1"
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "id": "field-1:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "field-1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "field-2:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "field-2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "field-3:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "field-3"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s1-eyebrow:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "s1-eyebrow"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s1-footer:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "s1-footer"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s1-rule:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "s1-rule"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s2-eyebrow:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "s2-eyebrow"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s2-footer:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "s2-footer"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s2-rule:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "s2-rule"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s3-eyebrow:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "s3-eyebrow"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s3-footer:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "s3-footer"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "s3-rule:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "s3-rule"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene1-line1:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "scene1-line1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene1-line1-reading",
+        "range": {
+          "start": 360000,
+          "end": 2232000
+        },
+        "targetIds": [
+          "scene1-line1"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "scene1-line2:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "scene1-line2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene1-line2-reading",
+        "range": {
+          "start": 432000,
+          "end": 2232000
+        },
+        "targetIds": [
+          "scene1-line2"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "scene2-line1:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "scene2-line1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene2-line1-reading",
+        "range": {
+          "start": 3240000,
+          "end": 4632000
+        },
+        "targetIds": [
+          "scene2-line1"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "scene2-line2:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "scene2-line2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene2-line2-reading",
+        "range": {
+          "start": 3312000,
+          "end": 4632000
+        },
+        "targetIds": [
+          "scene2-line2"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "scene3-line1:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "scene3-line1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene3-line1-reading",
+        "range": {
+          "start": 5160000,
+          "end": 7032000
+        },
+        "targetIds": [
+          "scene3-line1"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "scene3-line2:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "scene3-line2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "scene3-line2-reading",
+        "range": {
+          "start": 5232000,
+          "end": 7032000
+        },
+        "targetIds": [
+          "scene3-line2"
+        ],
+        "role": "reading"
+      },
+      {
+        "id": "signal-orb:texture",
+        "range": {
+          "start": 0,
+          "end": 2400000
+        },
+        "targetIds": [
+          "signal-orb"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "material-orb:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "material-orb"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "material-video:texture",
+        "range": {
+          "start": 2400000,
+          "end": 4800000
+        },
+        "targetIds": [
+          "material-video"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "reply-0:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "reply-0"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "reply-1:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "reply-1"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "reply-2:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "reply-2"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "ending:texture",
+        "range": {
+          "start": 4800000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "ending"
+        ],
+        "role": "texture"
+      },
+      {
+        "id": "mixed-final-hold",
+        "range": {
+          "start": 5664000,
+          "end": 7200000
+        },
+        "targetIds": [
+          "scene3-line1",
+          "scene3-line2",
+          "ending"
+        ],
+        "role": "closure"
+      },
+      {
+        "id": "soundtrack:texture",
+        "range": {
+          "start": 0,
+          "end": 7200000
+        },
+        "targetIds": [
+          "soundtrack"
+        ],
+        "role": "texture"
+      }
+    ],
+    "tensions": [],
+    "handoffs": [
+      {
+        "id": "material-handoff",
+        "fromTarget": "signal-orb",
+        "toTarget": "material-orb",
+        "at": 2400000,
+        "mode": "match-cut",
+        "preserve": [
+          "position"
+        ]
+      }
+    ]
+  },
+  "references": [],
+  "provenance": {
+    "runtime": "0.1.0",
+    "sdk": "0.1.0",
+    "sources": [
+      "scripts/create-showcase.ts",
+      "original-synthetic-audio-and-video",
+      "Noto Sans KR / SIL OFL 1.1"
+    ]
+  }
+}

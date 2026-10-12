@@ -1,0 +1,34 @@
+{
+  "manifest": {
+    "id": "showcase-ring",
+    "revision": 1,
+    "kind": "html",
+    "moduleHash": "",
+    "propsSchema": {
+      "type": "object"
+    },
+    "targets": [
+      {
+        "key": "root",
+        "channels": [
+          "x",
+          "y",
+          "z",
+          "scaleX",
+          "scaleY",
+          "rotateX",
+          "rotateY",
+          "rotateZ",
+          "opacity",
+          "clipProgress"
+        ],
+        "coordinateSpace": "local"
+      }
+    ],
+    "slots": [],
+    "assets": []
+  },
+  "files": {
+    "index.ts": "import {defineHtmlElement} from '@motiframe/authoring';\nexport default defineHtmlElement({\"id\":\"showcase-ring\",\"revision\":1,\"kind\":\"html\",\"moduleHash\":\"\",\"propsSchema\":{\"type\":\"object\"},\"targets\":[{\"key\":\"root\",\"channels\":[\"x\",\"y\",\"z\",\"scaleX\",\"scaleY\",\"rotateX\",\"rotateY\",\"rotateZ\",\"opacity\",\"clipProgress\"],\"coordinateSpace\":\"local\"}],\"slots\":[],\"assets\":[]},{\"html\":\"<div class=\\\"form\\\"></div>\",\"css\":\".form{border-radius:50%;box-sizing:border-box;border:1px solid currentColor;background:transparent!important}\",\"bindings\":[{\"selector\":\".form\",\"prop\":\"width\",\"kind\":\"style\",\"name\":\"width\",\"unit\":\"px\"},{\"selector\":\".form\",\"prop\":\"height\",\"kind\":\"style\",\"name\":\"height\",\"unit\":\"px\"},{\"selector\":\".form\",\"prop\":\"fill\",\"kind\":\"style\",\"name\":\"backgroundColor\"},{\"selector\":\".form\",\"prop\":\"color\",\"kind\":\"style\",\"name\":\"color\"}]});\n"
+  }
+}

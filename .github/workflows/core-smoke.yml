@@ -1,0 +1,45 @@
+name: Core smoke
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, macos-15-intel, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          clean: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+        with:
+          ffmpeg-version: '8.1.2'
+          architecture: x64
+      - run: bun install --frozen-lockfile
+      - run: bun run setup
+      - run: bun run build
+      - run: bun run check
+      - run: bun run test
+      - run: bun scripts/core-smoke.ts
+      - run: bun scripts/package-release.mjs
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: core-smoke-${{ matrix.os }}
+          path: |
+            artifacts/core-smoke/**/report.json
+            artifacts/core-smoke/**/*.png
+            artifacts/releases/*.tar.gz
+            artifacts/releases/*.sha256
+          if-no-files-found: warn
+          retention-days: 14

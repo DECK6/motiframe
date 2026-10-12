@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const lock = JSON.parse(await readFile(path.join(root, "runtime-lock.json"), "utf8"));
 const runtime = path.join(root, ".runtime");
 await mkdir(runtime, { recursive: true });
-const platform = process.platform === "win" ? "win" : process.platform;
+const platform = process.platform === "win32" ? "win" : process.platform;
 const archive = `node-v${lock.node}-${platform}-${process.arch}.${platform === "win" ? "zip" : "tar.gz"}`;
 const directory = `node-v${lock.node}-${platform}-${process.arch}`;
 const nodePath = path.join(runtime, directory, platform === "win" ? "node.exe" : "bin/node");

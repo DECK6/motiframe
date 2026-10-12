@@ -6,3 +6,7 @@ artifacts/
 .sdd-workspace/
 .DS_Store
 *.tsbuildinfo
+**/.motiframe/
+**/.motiframe-render-*/
+examples/quickstart/
+releases/

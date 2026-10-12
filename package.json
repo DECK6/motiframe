@@ -16,27 +16,31 @@
     "test:e2e": "node scripts/test.mjs tests/e2e",
     "check": "tsc --noEmit && biome check .",
     "build": "node scripts/build.mjs",
-    "dev": "vite --host 127.0.0.1",
-    "motiframe": "node scripts/cli.mjs"
+    "dev": "node scripts/dev.mjs",
+    "motiframe": "node scripts/cli.mjs",
+    "dev:browser": "vite --host 127.0.0.1"
   },
   "dependencies": {
+    "@puppeteer/browsers": "3.2.4",
+    "esbuild": "0.28.2",
+    "puppeteer-core": "25.13.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "zod": "4.6.6",
-    "puppeteer-core": "25.13.0",
-    "@puppeteer/browsers": "3.2.4",
-    "esbuild": "0.28.2"
+    "three": "0.186.1",
+    "tone": "15.1.22",
+    "zod": "4.6.6"
   },
   "devDependencies": {
-    "vite": "8.3.4",
-    "vitest": "5.0.3",
-    "typescript": "7.0.2",
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "26.6.5",
+    "@types/pngjs": "6.0.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "@types/node": "26.6.5",
+    "@types/three": "0.186.0",
     "pngjs": "7.0.0",
-    "@types/pngjs": "6.0.5",
     "tsx": "4.23.15",
-    "@biomejs/biome": "2.5.15"
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
   }
 }

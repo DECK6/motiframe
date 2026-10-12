@@ -1,0 +1,585 @@
+{
+  "schemaVersion": 1,
+  "id": "mixed-phrase",
+  "revision": 0,
+  "settings": {
+    "width": 320,
+    "height": 180,
+    "fps": {
+      "num": 30,
+      "den": 1
+    },
+    "duration": 1440000,
+    "ticksPerSecond": 240000,
+    "seed": 7,
+    "colorSpace": "srgb",
+    "sampleRate": 48000
+  },
+  "definitions": {
+    "video": {
+      "id": "video",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:media",
+      "propsSchema": {},
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "gain",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "wipe": {
+      "id": "wipe",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:html-rect",
+      "propsSchema": {},
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "gain",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "title": {
+      "id": "title",
+      "revision": 1,
+      "kind": "react",
+      "moduleHash": "builtin:react-text",
+      "propsSchema": {},
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "gain",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    },
+    "audio": {
+      "id": "audio",
+      "revision": 1,
+      "kind": "html",
+      "moduleHash": "builtin:audio",
+      "propsSchema": {},
+      "targets": [
+        {
+          "key": "root",
+          "channels": [
+            "x",
+            "y",
+            "z",
+            "scaleX",
+            "scaleY",
+            "rotateX",
+            "rotateY",
+            "rotateZ",
+            "opacity",
+            "clipProgress",
+            "gain",
+            "props.text"
+          ],
+          "coordinateSpace": "local"
+        }
+      ],
+      "slots": [],
+      "assets": []
+    }
+  },
+  "scenes": {
+    "main": {
+      "start": 0,
+      "duration": 1440000,
+      "rootIds": [
+        "video",
+        "wipe",
+        "title",
+        "audio"
+      ]
+    }
+  },
+  "instances": {
+    "video": {
+      "definitionId": "video",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "video",
+      "start": 648000,
+      "duration": 720000,
+      "props": {
+        "width": 320,
+        "height": 180,
+        "assetId": "video"
+      },
+      "locked": false
+    },
+    "wipe": {
+      "definitionId": "wipe",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "wipe",
+      "start": 0,
+      "duration": 1440000,
+      "props": {
+        "width": 20,
+        "height": 20,
+        "color": "#9aff6b"
+      },
+      "locked": false
+    },
+    "title": {
+      "definitionId": "title",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "title",
+      "start": 0,
+      "duration": 1440000,
+      "props": {
+        "text": "모션",
+        "fontSize": 38,
+        "color": "#ffffff",
+        "fontFamily": "MotiFrame Sans",
+        "width": 320,
+        "height": 80
+      },
+      "locked": false
+    },
+    "audio": {
+      "definitionId": "audio",
+      "definitionRevision": 1,
+      "parentId": null,
+      "slotId": null,
+      "trackId": "audio",
+      "start": 240000,
+      "duration": 480000,
+      "props": {},
+      "locked": false
+    }
+  },
+  "tracks": [
+    {
+      "id": "video",
+      "kind": "video",
+      "instanceIds": [
+        "video"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "wipe",
+      "kind": "graphics",
+      "instanceIds": [
+        "wipe"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "title",
+      "kind": "graphics",
+      "instanceIds": [
+        "title"
+      ],
+      "locked": false,
+      "muted": false
+    },
+    {
+      "id": "audio",
+      "kind": "audio",
+      "instanceIds": [
+        "audio"
+      ],
+      "locked": false,
+      "muted": false
+    }
+  ],
+  "channels": {
+    "title:root:x": {
+      "target": {
+        "instanceId": "title",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "title-x-0",
+          "at": 0,
+          "value": 30,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-x-1",
+          "at": 240000,
+          "value": 60,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-x-2",
+          "at": 360000,
+          "value": 230,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-x-3",
+          "at": 648000,
+          "value": 30,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "title:root:y": {
+      "target": {
+        "instanceId": "title",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "title-y-0",
+          "at": 0,
+          "value": 60,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "title:root:props.text": {
+      "target": {
+        "instanceId": "title",
+        "targetKey": "root",
+        "channel": "props.text"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "title-props.text-0",
+          "at": 0,
+          "value": "모션",
+          "interpolation": "hold"
+        },
+        {
+          "id": "title-props.text-1",
+          "at": 336000,
+          "value": "●",
+          "interpolation": "hold"
+        },
+        {
+          "id": "title-props.text-2",
+          "at": 840000,
+          "value": "MotiFrame",
+          "interpolation": "hold"
+        }
+      ]
+    },
+    "title:root:opacity": {
+      "target": {
+        "instanceId": "title",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "title-opacity-0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-opacity-1",
+          "at": 360000,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-opacity-2",
+          "at": 432000,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-opacity-3",
+          "at": 792000,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "title-opacity-4",
+          "at": 840000,
+          "value": 1,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "wipe:root:x": {
+      "target": {
+        "instanceId": "wipe",
+        "targetKey": "root",
+        "channel": "x"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "wipe-x-0",
+          "at": 0,
+          "value": 240,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-x-1",
+          "at": 360000,
+          "value": 240,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-x-2",
+          "at": 648000,
+          "value": 0,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "wipe:root:y": {
+      "target": {
+        "instanceId": "wipe",
+        "targetKey": "root",
+        "channel": "y"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "wipe-y-0",
+          "at": 0,
+          "value": 80,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-y-1",
+          "at": 360000,
+          "value": 80,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-y-2",
+          "at": 648000,
+          "value": 0,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "wipe:root:scaleX": {
+      "target": {
+        "instanceId": "wipe",
+        "targetKey": "root",
+        "channel": "scaleX"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "wipe-scaleX-0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleX-1",
+          "at": 360000,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleX-2",
+          "at": 384000,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleX-3",
+          "at": 648000,
+          "value": 16,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "wipe:root:scaleY": {
+      "target": {
+        "instanceId": "wipe",
+        "targetKey": "root",
+        "channel": "scaleY"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "wipe-scaleY-0",
+          "at": 0,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleY-1",
+          "at": 360000,
+          "value": 0,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleY-2",
+          "at": 384000,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-scaleY-3",
+          "at": 648000,
+          "value": 9,
+          "interpolation": "linear"
+        }
+      ]
+    },
+    "wipe:root:opacity": {
+      "target": {
+        "instanceId": "wipe",
+        "targetKey": "root",
+        "channel": "opacity"
+      },
+      "owner": "manual",
+      "locked": false,
+      "keys": [
+        {
+          "id": "wipe-opacity-0",
+          "at": 0,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-opacity-1",
+          "at": 648000,
+          "value": 1,
+          "interpolation": "linear"
+        },
+        {
+          "id": "wipe-opacity-2",
+          "at": 720000,
+          "value": 0,
+          "interpolation": "linear"
+        }
+      ]
+    }
+  },
+  "assets": {
+    "video": {
+      "sha256": "b0fc80d7c5fb5e0d7dc53ed16450f34b197185fa3b20b6639f014bf48113a1fe",
+      "kind": "video",
+      "logicalPath": "assets/video.mp4"
+    },
+    "pulse": {
+      "sha256": "ad7e47f4f71bcba57908f9a30d2da6d39cded456e702ade19967135a2dd0f064",
+      "kind": "audio",
+      "logicalPath": "assets/pulse.wav"
+    },
+    "font": {
+      "sha256": "194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252",
+      "kind": "font",
+      "logicalPath": "assets/NotoSansKR.ttf",
+      "fontMetadata": {
+        "family": "MotiFrame Sans"
+      }
+    }
+  },
+  "mediaClips": {
+    "video": {
+      "assetId": "video",
+      "sourceIn": 0,
+      "sourceOut": 720000,
+      "rate": {
+        "num": 1,
+        "den": 1
+      },
+      "gain": 0
+    },
+    "audio": {
+      "assetId": "pulse",
+      "sourceIn": 0,
+      "sourceOut": 480000,
+      "rate": {
+        "num": 1,
+        "den": 1
+      },
+      "gain": 1
+    }
+  },
+  "score": {
+    "phrases": [],
+    "events": [],
+    "windows": [],
+    "tensions": [],
+    "handoffs": []
+  },
+  "references": [],
+  "provenance": {
+    "runtime": "0.1.0",
+    "sdk": "0.1.0",
+    "sources": [
+      "synthetic-fixture"
+    ]
+  }
+}

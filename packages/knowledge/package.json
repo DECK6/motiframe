@@ -1,0 +1,11 @@
+{
+  "name": "@motiframe/knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./import": "./src/import.ts",
+    "./assets": "./src/assets.ts"
+  }
+}

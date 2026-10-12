@@ -1,0 +1,68 @@
+{
+  "manifest": {
+    "id": "title",
+    "revision": 2,
+    "kind": "react",
+    "moduleHash": "",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "fontSize": {
+          "type": "number"
+        },
+        "fontWeight": {
+          "type": "number"
+        },
+        "fontFamily": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        }
+      }
+    },
+    "targets": [
+      {
+        "key": "root",
+        "channels": [
+          "x",
+          "y",
+          "z",
+          "scaleX",
+          "scaleY",
+          "rotateX",
+          "rotateY",
+          "rotateZ",
+          "opacity",
+          "clipProgress",
+          "props.text"
+        ],
+        "coordinateSpace": "local"
+      },
+      {
+        "key": "caption",
+        "channels": [
+          "opacity"
+        ],
+        "coordinateSpace": "local"
+      }
+    ],
+    "slots": [],
+    "assets": []
+  },
+  "entry": "index.tsx",
+  "files": {
+    "index.tsx": "import {defineReactElement,ThreeCanvas,MotionTarget} from '@motiframe/authoring';\nimport {create} from './scene';\nimport {during} from './motion';\nconst manifest={\n  \"id\": \"title\",\n  \"revision\": 2,\n  \"kind\": \"react\",\n  \"moduleHash\": \"\",\n  \"propsSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"text\": {\n        \"type\": \"string\"\n      },\n      \"fontSize\": {\n        \"type\": \"number\"\n      },\n      \"fontWeight\": {\n        \"type\": \"number\"\n      },\n      \"fontFamily\": {\n        \"type\": \"string\"\n      },\n      \"color\": {\n        \"type\": \"string\"\n      },\n      \"width\": {\n        \"type\": \"number\"\n      },\n      \"height\": {\n        \"type\": \"number\"\n      }\n    }\n  },\n  \"targets\": [\n    {\n      \"key\": \"root\",\n      \"channels\": [\n        \"x\",\n        \"y\",\n        \"z\",\n        \"scaleX\",\n        \"scaleY\",\n        \"rotateX\",\n        \"rotateY\",\n        \"rotateZ\",\n        \"opacity\",\n        \"clipProgress\",\n        \"props.text\"\n      ],\n      \"coordinateSpace\": \"local\"\n    },\n    {\n      \"key\": \"caption\",\n      \"channels\": [\n        \"opacity\"\n      ],\n      \"coordinateSpace\": \"local\"\n    }\n  ],\n  \"slots\": [],\n  \"assets\": []\n};\nexport default defineReactElement(manifest,({props,frame})=>{\n const t=frame.tick/240000;\n const firstRead=during(t,0.62,0.84)*(1-during(t,3.8,4.10));\n const inheritedRead=during(t,4.15,4.40);\n return <div style={{position:'relative',width:960,height:300}}>\n  <ThreeCanvas frame={frame} width={960} height={300} create={create}/>\n  <MotionTarget targetKey=\"caption\"><div style={{position:'absolute',left:0,top:28,width:430,fontSize:44,fontFamily:String(props.fontFamily??'sans-serif'),color:String(props.color??'#ffffff'),opacity:Math.max(firstRead,inheritedRead),transform:'translateY('+((1-firstRead)*(1-inheritedRead)*12)+'px)'}}>\n   {String(props.text??'Preparation. Release. Response.')}\n  </div></MotionTarget>\n </div>;\n});\n",
+    "scene.ts": "import {Scene,PerspectiveCamera,BoxGeometry,MeshBasicMaterial,Mesh} from 'three';\nimport {during} from './motion';\nexport function create({width,height}){\n const scene=new Scene();\n const camera=new PerspectiveCamera(36,width/height,0.1,100);camera.position.set(0,0,6);\n const actor=new Mesh(new BoxGeometry(1.15,1.15,1.15),new MeshBasicMaterial({color:'#bcf77b'}));scene.add(actor);\n return {scene,camera,update(frame){\n  const t=frame.tick/240000;\n  const prepare=during(t,0,0.28),release=during(t,0.28,0.48),response=during(t,0.48,0.82);\n  const first=during(t,1.55,1.72),second=during(t,1.9,2.02),accent=during(t,2.35,2.60);\n  const handoff=during(t,3.8,4.3);\n  actor.position.set(-1.4-0.18*prepare+2.2*release-0.1*response+0.8*handoff,0,0);\n  actor.scale.set(1-0.35*prepare+0.35*release+3.2*handoff,1+0.18*prepare-0.18*release+3.2*handoff,1+3.2*handoff);\n  actor.rotation.set(0.12*release,0.7*release+0.28*first+0.28*second+1.1*accent,0.12*(release-response));\n  const cameraLag=during(t,0.54,0.90);camera.position.set(0.22*cameraLag,0.05*cameraLag,6-0.4*during(t,2.48,2.82));camera.lookAt(0,0,0);\n }};\n}\n",
+    "motion.ts": "export const unit=(v)=>Math.max(0,Math.min(1,v));\nexport const ease=(v)=>{const t=unit(v);return t*t*(3-2*t);};\nexport const during=(seconds,start,end)=>ease((seconds-start)/(end-start));\n"
+  }
+}

@@ -1,0 +1,26 @@
+/* DEXA application theme. Source: DEXA Design System, DESIGN.md (2026-10-12). */
+:root {
+  --paper: #f5f1e6;
+  --panel: #ebe4d3;
+  --panel2: #e3dbc6;
+  --ink: #17181b;
+  --line: #d9d0bb;
+  --muted: #6a644f;
+  --orange: #ff5a1f;
+  --orange-hover: #e64d14;
+  --cyan: #5ee7f3;
+  --red: #e0402a;
+  --red-text: #b33320;
+  --ink-display: #0d0e10;
+  --ink-key: #2a2b2e;
+  --ink-key2: #3a3b3f;
+  --ink-text: #8a8d93;
+  --ink-text-dim: #5a5d63;
+  --display-text: #f7fafc;
+  --font-sans: "Space Grotesk", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --surface: var(--paper);
+  --border: var(--line);
+  --accent: var(--orange);
+  --radius: 8px;
+}

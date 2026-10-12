@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "width": 640,
+  "height": 360,
+  "fps": 30,
+  "works": [
+    {
+      "id": "hangul",
+      "title": "사이의 리듬",
+      "project": "hangul/project.json",
+      "frames": 450,
+      "durationSeconds": 15,
+      "sha256": "2e7885df9b07afd752e54e80039ca2eef502ec98e6796d389fe77c2592282e27"
+    },
+    {
+      "id": "slow-tension",
+      "title": "해소를 미룬 시간",
+      "project": "slow-tension/project.json",
+      "frames": 300,
+      "durationSeconds": 10,
+      "sha256": "2da2666049df0c9214fb4c8e98a28854ba9fbe21600dad111694754b57fb79d6"
+    },
+    {
+      "id": "mixed",
+      "title": "작은 신호, 다른 재료",
+      "project": "mixed/project.json",
+      "frames": 900,
+      "durationSeconds": 30,
+      "sha256": "19afefd68a2d1220e581f5c86f538d0ebbba0c9f438521c41edb71828677690e"
+    }
+  ]
+}

@@ -1,4 +1,7 @@
+import path from "node:path";
 import { build } from "esbuild";
+import { build as buildEditor } from "vite";
+import { packageSdk } from "./package-sdk.mjs";
 
 await build({
   entryPoints: ["apps/runner/src/cli.ts"],
@@ -18,4 +21,16 @@ await build({
   jsx: "automatic",
   define: { "process.env.NODE_ENV": '"production"' },
 });
-console.log("Built runner and unified stage.");
+await buildEditor({
+  configFile: false,
+  root: path.resolve("apps/editor"),
+  build: {
+    outDir: path.resolve("dist/editor"),
+    emptyOutDir: false,
+    rollupOptions: {
+      input: { index: path.resolve("apps/editor/index.html"), stage: path.resolve("apps/editor/stage.html") },
+    },
+  },
+});
+await packageSdk();
+console.log("Built runner, unified stage and editor.");
